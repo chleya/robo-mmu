@@ -1,0 +1,3139 @@
+{
+  "b0_jsonl": "robo_bud_results\\full134_qwen7b_b0.jsonl",
+  "b0_sha256": "5ca4106eec1b3f3922d4bd311622332132a17c9f1d6892f8406930db8410bf15",
+  "B0_VanillaReAct": {
+    "n_episodes": 134,
+    "success_count": 55,
+    "success_rate": 0.4104,
+    "fail_count": 79,
+    "mean_steps_all": 21.81,
+    "mean_steps_success": 10.04,
+    "mean_peak_prompt_tokens": 1794.4,
+    "max_peak_prompt_tokens": 2790,
+    "mean_total_gen_tokens": 560.0,
+    "truncation_rate": 0.0,
+    "by_task_type": {
+      "pick_and_place_simple": {
+        "n": 24,
+        "wins": 19,
+        "success_rate": 0.7917,
+        "mean_steps": 13.71
+      },
+      "pick_clean_then_place_in_recep": {
+        "n": 31,
+        "wins": 9,
+        "success_rate": 0.2903,
+        "mean_steps": 25.13
+      },
+      "pick_heat_then_place_in_recep": {
+        "n": 23,
+        "wins": 6,
+        "success_rate": 0.2609,
+        "mean_steps": 25.35
+      },
+      "pick_cool_then_place_in_recep": {
+        "n": 21,
+        "wins": 13,
+        "success_rate": 0.619,
+        "mean_steps": 17.43
+      },
+      "look_at_obj_in_light": {
+        "n": 18,
+        "wins": 7,
+        "success_rate": 0.3889,
+        "mean_steps": 20.83
+      },
+      "pick_two_obj_and_place": {
+        "n": 17,
+        "wins": 1,
+        "success_rate": 0.0588,
+        "mean_steps": 28.82
+      }
+    },
+    "pathology_primary_counts": {
+      "F1_FormatOrInadmissible": 49,
+      "F2_RepeatLoop": 15,
+      "F3_EmptySearchRedundancy": 5,
+      "F4_PreconditionViolation": 5,
+      "F5_StepExhaustionOther": 5
+    },
+    "pathology_primary_rates_of_fail": {
+      "F1_FormatOrInadmissible": 0.6203,
+      "F2_RepeatLoop": 0.1899,
+      "F3_EmptySearchRedundancy": 0.0633,
+      "F4_PreconditionViolation": 0.0633,
+      "F5_StepExhaustionOther": 0.0633
+    },
+    "pathology_multilabel_counts": {
+      "F1_FormatOrInadmissible": 49,
+      "F2_RepeatLoop": 61,
+      "F3_EmptySearchRedundancy": 16,
+      "F4_PreconditionViolation": 38,
+      "F5_StepExhaustionOther": 5
+    },
+    "pathology_multilabel_rates_of_fail": {
+      "F1_FormatOrInadmissible": 0.6203,
+      "F2_RepeatLoop": 0.7722,
+      "F3_EmptySearchRedundancy": 0.2025,
+      "F4_PreconditionViolation": 0.481,
+      "F5_StepExhaustionOther": 0.0633
+    },
+    "joint_F2_F3_F4_fail_count": 73,
+    "joint_F2_F3_F4_rate_of_fail": 0.9241
+  },
+  "B0_spotcheck_15": [
+    {
+      "gamefile": "/root/.cache/alfworld/json_2.1.1/valid_unseen/look_at_obj_in_light-Bowl-None-DeskLamp-308/trial_T20190907_133919_856963/game.tw-pddl",
+      "task_type": "look_at_obj_in_light",
+      "arm": "B0_VanillaReAct",
+      "num_steps": 30,
+      "primary_failure": "F1_FormatOrInadmissible",
+      "multilabel_flags": {
+        "F1_FormatOrInadmissible": true,
+        "F2_RepeatLoop": true,
+        "F3_EmptySearchRedundancy": false,
+        "F4_PreconditionViolation": true,
+        "F5_StepExhaustionOther": false
+      },
+      "diagnostics": {
+        "bad_step_ratio": 0.8333,
+        "consec_repeat_max": 21,
+        "win6_max_ineff": 6,
+        "revisit_empty_count": 0,
+        "precond_hits": 1
+      },
+      "trace_preview": [
+        {
+          "step": 1,
+          "act": "go to desk 1",
+          "obs": "You arrive at desk 1. On the desk 1, you see a desklamp 1, a keychain 3, a mug 2, a pen 2, a pen 1, and a pencil 2.",
+          "nh": false
+        },
+        {
+          "step": 2,
+          "act": "go to desk 2",
+          "obs": "You arrive at desk 2. On the desk 2, you see a alarmclock 1, a bowl 1, and a cd 3.",
+          "nh": false
+        },
+        {
+          "step": 3,
+          "act": "use desklamp 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 4,
+          "act": "examine bowl 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 5,
+          "act": "examine bowl 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 6,
+          "act": "examine bowl 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 7,
+          "act": "inventory",
+          "obs": "You are not carrying anything.",
+          "nh": false
+        },
+        {
+          "step": 8,
+          "act": "inventory",
+          "obs": "You are not carrying anything.",
+          "nh": false
+        },
+        {
+          "step": 9,
+          "act": "inventory",
+          "obs": "You are not carrying anything.",
+          "nh": false
+        },
+        {
+          "step": 10,
+          "act": "task completed",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 11,
+          "act": "task completed",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 12,
+          "act": "task completed",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 13,
+          "act": "task completed",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 14,
+          "act": "task completed",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 15,
+          "act": "task completed",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 16,
+          "act": "task completed",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 17,
+          "act": "task completed",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 18,
+          "act": "task completed",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 19,
+          "act": "task completed",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 20,
+          "act": "task completed",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 21,
+          "act": "task completed",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 22,
+          "act": "task completed",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 23,
+          "act": "task completed",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 24,
+          "act": "task completed",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 25,
+          "act": "task completed",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 26,
+          "act": "task completed",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 27,
+          "act": "task completed",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 28,
+          "act": "task completed",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 29,
+          "act": "task completed",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 30,
+          "act": "task completed",
+          "obs": "Nothing happens.",
+          "nh": true
+        }
+      ]
+    },
+    {
+      "gamefile": "/root/.cache/alfworld/json_2.1.1/valid_unseen/pick_two_obj_and_place-SoapBar-None-GarbageCan-424/trial_T20190909_064221_368939/game.tw-pddl",
+      "task_type": "pick_two_obj_and_place",
+      "arm": "B0_VanillaReAct",
+      "num_steps": 30,
+      "primary_failure": "F2_RepeatLoop",
+      "multilabel_flags": {
+        "F1_FormatOrInadmissible": false,
+        "F2_RepeatLoop": true,
+        "F3_EmptySearchRedundancy": true,
+        "F4_PreconditionViolation": true,
+        "F5_StepExhaustionOther": false
+      },
+      "diagnostics": {
+        "bad_step_ratio": 0.3333,
+        "consec_repeat_max": 2,
+        "win6_max_ineff": 3,
+        "revisit_empty_count": 3,
+        "precond_hits": 1
+      },
+      "trace_preview": [
+        {
+          "step": 1,
+          "act": "go to sinkbasin 1",
+          "obs": "You arrive at sinkbasin 1. On the sinkbasin 1, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 2,
+          "act": "go to sinkbasin 2",
+          "obs": "You arrive at sinkbasin 2. On the sinkbasin 2, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 3,
+          "act": "go to cabinet 1",
+          "obs": "You arrive at cabinet 1. The cabinet 1 is closed.",
+          "nh": false
+        },
+        {
+          "step": 4,
+          "act": "open cabinet 1",
+          "obs": "You open the cabinet 1. The cabinet 1 is open. In it, you see a cloth 1, and a soapbottle 1.",
+          "nh": false
+        },
+        {
+          "step": 5,
+          "act": "go to cabinet 2",
+          "obs": "You arrive at cabinet 2. The cabinet 2 is closed.",
+          "nh": false
+        },
+        {
+          "step": 6,
+          "act": "open cabinet 2",
+          "obs": "You open the cabinet 2. The cabinet 2 is open. In it, you see a candle 2, and a toiletpaper 1.",
+          "nh": false
+        },
+        {
+          "step": 7,
+          "act": "go to cabinet 3",
+          "obs": "You arrive at cabinet 3. The cabinet 3 is closed.",
+          "nh": false
+        },
+        {
+          "step": 8,
+          "act": "open cabinet 3",
+          "obs": "You open the cabinet 3. The cabinet 3 is open. In it, you see a cloth 2.",
+          "nh": false
+        },
+        {
+          "step": 9,
+          "act": "go to cabinet 4",
+          "obs": "You arrive at cabinet 4. The cabinet 4 is closed.",
+          "nh": false
+        },
+        {
+          "step": 10,
+          "act": "open cabinet 4",
+          "obs": "You open the cabinet 4. The cabinet 4 is open. In it, you see a soapbar 2.",
+          "nh": false
+        },
+        {
+          "step": 11,
+          "act": "take soapbar 2 from cabinet 4",
+          "obs": "You pick up the soapbar 2 from the cabinet 4.",
+          "nh": false
+        },
+        {
+          "step": 12,
+          "act": "go to garbagecan 1",
+          "obs": "You arrive at garbagecan 1. On the garbagecan 1, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 13,
+          "act": "move soapbar 2 to garbagecan 1",
+          "obs": "You move the soapbar 2 to the garbagecan 1.",
+          "nh": false
+        },
+        {
+          "step": 14,
+          "act": "go to cabinet 1",
+          "obs": "You arrive at cabinet 1. The cabinet 1 is open. In it, you see a cloth 1, and a soapbottle 1.",
+          "nh": false
+        },
+        {
+          "step": 15,
+          "act": "go to cabinet 2",
+          "obs": "You arrive at cabinet 2. The cabinet 2 is open. In it, you see a candle 2, and a toiletpaper 1.",
+          "nh": false
+        },
+        {
+          "step": 16,
+          "act": "go to cabinet 3",
+          "obs": "You arrive at cabinet 3. The cabinet 3 is open. In it, you see a cloth 2.",
+          "nh": false
+        },
+        {
+          "step": 17,
+          "act": "go to cabinet 4",
+          "obs": "You arrive at cabinet 4. The cabinet 4 is open. In it, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 18,
+          "act": "examine garbagecan 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 19,
+          "act": "inventory",
+          "obs": "You are not carrying anything.",
+          "nh": false
+        },
+        {
+          "step": 20,
+          "act": "examine garbagecan 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 21,
+          "act": "move soapbar 2 to garbagecan 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 22,
+          "act": "inventory",
+          "obs": "You are not carrying anything.",
+          "nh": false
+        },
+        {
+          "step": 23,
+          "act": "examine garbagecan 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 24,
+          "act": "inventory",
+          "obs": "You are not carrying anything.",
+          "nh": false
+        },
+        {
+          "step": 25,
+          "act": "examine garbagecan 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 26,
+          "act": "report failure",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 27,
+          "act": "report failure",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 28,
+          "act": "examine garbagecan 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 29,
+          "act": "report failure",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 30,
+          "act": "examine garbagecan 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        }
+      ]
+    },
+    {
+      "gamefile": "/root/.cache/alfworld/json_2.1.1/valid_unseen/pick_and_place_simple-SaltShaker-None-Cabinet-10/trial_T20190906_191429_743650/game.tw-pddl",
+      "task_type": "pick_and_place_simple",
+      "arm": "B0_VanillaReAct",
+      "num_steps": 30,
+      "primary_failure": "F3_EmptySearchRedundancy",
+      "multilabel_flags": {
+        "F1_FormatOrInadmissible": false,
+        "F2_RepeatLoop": false,
+        "F3_EmptySearchRedundancy": true,
+        "F4_PreconditionViolation": false,
+        "F5_StepExhaustionOther": false
+      },
+      "diagnostics": {
+        "bad_step_ratio": 0.2333,
+        "consec_repeat_max": 1,
+        "win6_max_ineff": 2,
+        "revisit_empty_count": 2,
+        "precond_hits": 0
+      },
+      "trace_preview": [
+        {
+          "step": 1,
+          "act": "go to countertop 1",
+          "obs": "You arrive at countertop 1. On the countertop 1, you see a mug 1, and a soapbottle 2.",
+          "nh": false
+        },
+        {
+          "step": 2,
+          "act": "go to countertop 2",
+          "obs": "You arrive at countertop 2. On the countertop 2, you see a apple 2, a bowl 2, a bread 2, a bread 1, a creditcard 3, a cr",
+          "nh": false
+        },
+        {
+          "step": 3,
+          "act": "go to countertop 3",
+          "obs": "You arrive at countertop 3. On the countertop 3, you see a apple 3, a butterknife 1, a cellphone 1, a houseplant 1, a kn",
+          "nh": false
+        },
+        {
+          "step": 4,
+          "act": "go to drawer 1",
+          "obs": "You arrive at drawer 1. The drawer 1 is closed.",
+          "nh": false
+        },
+        {
+          "step": 5,
+          "act": "open drawer 1",
+          "obs": "You open the drawer 1. The drawer 1 is open. In it, you see a creditcard 1, and a spatula 1.",
+          "nh": false
+        },
+        {
+          "step": 6,
+          "act": "go to drawer 2",
+          "obs": "You arrive at drawer 2. The drawer 2 is closed.",
+          "nh": false
+        },
+        {
+          "step": 7,
+          "act": "open drawer 2",
+          "obs": "You open the drawer 2. The drawer 2 is open. In it, you see a peppershaker 1, and a spoon 1.",
+          "nh": false
+        },
+        {
+          "step": 8,
+          "act": "go to drawer 3",
+          "obs": "You arrive at drawer 3. The drawer 3 is closed.",
+          "nh": false
+        },
+        {
+          "step": 9,
+          "act": "open drawer 3",
+          "obs": "You open the drawer 3. The drawer 3 is open. In it, you see a dishsponge 1.",
+          "nh": false
+        },
+        {
+          "step": 10,
+          "act": "go to cabinet 1",
+          "obs": "You arrive at cabinet 1. On the cabinet 1, you see a glassbottle 2.",
+          "nh": false
+        },
+        {
+          "step": 11,
+          "act": "go to cabinet 2",
+          "obs": "You arrive at cabinet 2. The cabinet 2 is closed.",
+          "nh": false
+        },
+        {
+          "step": 12,
+          "act": "open cabinet 2",
+          "obs": "You open the cabinet 2. The cabinet 2 is open. In it, you see a cup 1.",
+          "nh": false
+        },
+        {
+          "step": 13,
+          "act": "go to cabinet 3",
+          "obs": "You arrive at cabinet 3. On the cabinet 3, you see a plate 1.",
+          "nh": false
+        },
+        {
+          "step": 14,
+          "act": "go to cabinet 4",
+          "obs": "You arrive at cabinet 4. On the cabinet 4, you see a glassbottle 1, and a soapbottle 1.",
+          "nh": false
+        },
+        {
+          "step": 15,
+          "act": "go to cabinet 5",
+          "obs": "You arrive at cabinet 5. The cabinet 5 is closed.",
+          "nh": false
+        },
+        {
+          "step": 16,
+          "act": "open cabinet 5",
+          "obs": "You open the cabinet 5. The cabinet 5 is open. In it, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 17,
+          "act": "go to cabinet 6",
+          "obs": "You arrive at cabinet 6. The cabinet 6 is closed.",
+          "nh": false
+        },
+        {
+          "step": 18,
+          "act": "open cabinet 6",
+          "obs": "You open the cabinet 6. The cabinet 6 is open. In it, you see a plate 2.",
+          "nh": false
+        },
+        {
+          "step": 19,
+          "act": "go to fridge 1",
+          "obs": "You arrive at fridge 1. The fridge 1 is closed.",
+          "nh": false
+        },
+        {
+          "step": 20,
+          "act": "open fridge 1",
+          "obs": "You open the fridge 1. The fridge 1 is open. In it, you see a apple 1, a bowl 1, a pan 1, a tomato 2, and a tomato 1.",
+          "nh": false
+        },
+        {
+          "step": 21,
+          "act": "go to shelf 1",
+          "obs": "You arrive at shelf 1. On the shelf 1, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 22,
+          "act": "go to shelf 2",
+          "obs": "You arrive at shelf 2. On the shelf 2, you see a glassbottle 3, and a saltshaker 1.",
+          "nh": false
+        },
+        {
+          "step": 23,
+          "act": "take saltshaker 1 from shelf 2",
+          "obs": "You pick up the saltshaker 1 from the shelf 2.",
+          "nh": false
+        },
+        {
+          "step": 24,
+          "act": "move saltshaker 1 to cabinet 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 25,
+          "act": "open cabinet 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 26,
+          "act": "examine cabinet 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 27,
+          "act": "move saltshaker 1 to cabinet 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 28,
+          "act": "open cabinet 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 29,
+          "act": "examine cabinet 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 30,
+          "act": "move saltshaker 1 to cabinet 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        }
+      ]
+    },
+    {
+      "gamefile": "/root/.cache/alfworld/json_2.1.1/valid_unseen/look_at_obj_in_light-Bowl-None-DeskLamp-308/trial_T20190907_133953_562557/game.tw-pddl",
+      "task_type": "look_at_obj_in_light",
+      "arm": "B0_VanillaReAct",
+      "num_steps": 30,
+      "primary_failure": "F4_PreconditionViolation",
+      "multilabel_flags": {
+        "F1_FormatOrInadmissible": false,
+        "F2_RepeatLoop": false,
+        "F3_EmptySearchRedundancy": false,
+        "F4_PreconditionViolation": true,
+        "F5_StepExhaustionOther": false
+      },
+      "diagnostics": {
+        "bad_step_ratio": 0.1667,
+        "consec_repeat_max": 2,
+        "win6_max_ineff": 2,
+        "revisit_empty_count": 0,
+        "precond_hits": 2
+      },
+      "trace_preview": [
+        {
+          "step": 1,
+          "act": "go to shelf 1",
+          "obs": "You arrive at shelf 1. On the shelf 1, you see a pen 1.",
+          "nh": false
+        },
+        {
+          "step": 2,
+          "act": "go to shelf 2",
+          "obs": "You arrive at shelf 2. On the shelf 2, you see a bowl 1.",
+          "nh": false
+        },
+        {
+          "step": 3,
+          "act": "use desklamp 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 4,
+          "act": "use desklamp 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 5,
+          "act": "examine desklamp 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 6,
+          "act": "examine shelf 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 7,
+          "act": "examine bowl 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 8,
+          "act": "take bowl 1 from shelf 2",
+          "obs": "You pick up the bowl 1 from the shelf 2.",
+          "nh": false
+        },
+        {
+          "step": 9,
+          "act": "examine bowl 1",
+          "obs": "This is a normal bowl 1. In it, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 10,
+          "act": "inventory",
+          "obs": "You are carrying: a bowl 1.",
+          "nh": false
+        },
+        {
+          "step": 11,
+          "act": "inventory",
+          "obs": "You are carrying: a bowl 1.",
+          "nh": false
+        },
+        {
+          "step": 12,
+          "act": "examine bowl 1",
+          "obs": "This is a normal bowl 1. In it, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 13,
+          "act": "inventory",
+          "obs": "You are carrying: a bowl 1.",
+          "nh": false
+        },
+        {
+          "step": 14,
+          "act": "examine bowl 1",
+          "obs": "This is a normal bowl 1. In it, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 15,
+          "act": "inventory",
+          "obs": "You are carrying: a bowl 1.",
+          "nh": false
+        },
+        {
+          "step": 16,
+          "act": "examine bowl 1",
+          "obs": "This is a normal bowl 1. In it, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 17,
+          "act": "inventory",
+          "obs": "You are carrying: a bowl 1.",
+          "nh": false
+        },
+        {
+          "step": 18,
+          "act": "examine bowl 1",
+          "obs": "This is a normal bowl 1. In it, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 19,
+          "act": "inventory",
+          "obs": "You are carrying: a bowl 1.",
+          "nh": false
+        },
+        {
+          "step": 20,
+          "act": "examine bowl 1",
+          "obs": "This is a normal bowl 1. In it, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 21,
+          "act": "inventory",
+          "obs": "You are carrying: a bowl 1.",
+          "nh": false
+        },
+        {
+          "step": 22,
+          "act": "examine bowl 1",
+          "obs": "This is a normal bowl 1. In it, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 23,
+          "act": "inventory",
+          "obs": "You are carrying: a bowl 1.",
+          "nh": false
+        },
+        {
+          "step": 24,
+          "act": "examine bowl 1",
+          "obs": "This is a normal bowl 1. In it, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 25,
+          "act": "inventory",
+          "obs": "You are carrying: a bowl 1.",
+          "nh": false
+        },
+        {
+          "step": 26,
+          "act": "examine bowl 1",
+          "obs": "This is a normal bowl 1. In it, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 27,
+          "act": "inventory",
+          "obs": "You are carrying: a bowl 1.",
+          "nh": false
+        },
+        {
+          "step": 28,
+          "act": "inventory",
+          "obs": "You are carrying: a bowl 1.",
+          "nh": false
+        },
+        {
+          "step": 29,
+          "act": "examine bowl 1",
+          "obs": "This is a normal bowl 1. In it, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 30,
+          "act": "inventory",
+          "obs": "You are carrying: a bowl 1.",
+          "nh": false
+        }
+      ]
+    },
+    {
+      "gamefile": "/root/.cache/alfworld/json_2.1.1/valid_unseen/pick_two_obj_and_place-Pillow-None-Sofa-219/trial_T20190907_163327_486300/game.tw-pddl",
+      "task_type": "pick_two_obj_and_place",
+      "arm": "B0_VanillaReAct",
+      "num_steps": 30,
+      "primary_failure": "F5_StepExhaustionOther",
+      "multilabel_flags": {
+        "F1_FormatOrInadmissible": false,
+        "F2_RepeatLoop": false,
+        "F3_EmptySearchRedundancy": false,
+        "F4_PreconditionViolation": false,
+        "F5_StepExhaustionOther": true
+      },
+      "diagnostics": {
+        "bad_step_ratio": 0.2,
+        "consec_repeat_max": 1,
+        "win6_max_ineff": 1,
+        "revisit_empty_count": 0,
+        "precond_hits": 0
+      },
+      "trace_preview": [
+        {
+          "step": 1,
+          "act": "go to drawer 1",
+          "obs": "You arrive at drawer 1. The drawer 1 is closed.",
+          "nh": false
+        },
+        {
+          "step": 2,
+          "act": "open drawer 1",
+          "obs": "You open the drawer 1. The drawer 1 is open. In it, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 3,
+          "act": "go to drawer 2",
+          "obs": "You arrive at drawer 2. The drawer 2 is closed.",
+          "nh": false
+        },
+        {
+          "step": 4,
+          "act": "open drawer 2",
+          "obs": "You open the drawer 2. The drawer 2 is open. In it, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 5,
+          "act": "go to drawer 3",
+          "obs": "You arrive at drawer 3. The drawer 3 is closed.",
+          "nh": false
+        },
+        {
+          "step": 6,
+          "act": "open drawer 3",
+          "obs": "You open the drawer 3. The drawer 3 is open. In it, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 7,
+          "act": "go to drawer 4",
+          "obs": "You arrive at drawer 4. The drawer 4 is closed.",
+          "nh": false
+        },
+        {
+          "step": 8,
+          "act": "open drawer 4",
+          "obs": "You open the drawer 4. The drawer 4 is open. In it, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 9,
+          "act": "go to dresser 1",
+          "obs": "You arrive at dresser 1. On the dresser 1, you see a laptop 1, a newspaper 3, a newspaper 2, a remotecontrol 1, a statue",
+          "nh": false
+        },
+        {
+          "step": 10,
+          "act": "go to cabinet 1",
+          "obs": "You arrive at cabinet 1. The cabinet 1 is closed.",
+          "nh": false
+        },
+        {
+          "step": 11,
+          "act": "open cabinet 1",
+          "obs": "You open the cabinet 1. The cabinet 1 is open. In it, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 12,
+          "act": "go to cabinet 2",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 13,
+          "act": "open cabinet 2",
+          "obs": "You open the cabinet 2. The cabinet 2 is open. In it, you see a tissuebox 2.",
+          "nh": false
+        },
+        {
+          "step": 14,
+          "act": "go to cabinet 3",
+          "obs": "You arrive at cabinet 3. The cabinet 3 is closed.",
+          "nh": false
+        },
+        {
+          "step": 15,
+          "act": "open cabinet 3",
+          "obs": "You open the cabinet 3. The cabinet 3 is open. In it, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 16,
+          "act": "go to cabinet 4",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 17,
+          "act": "open cabinet 4",
+          "obs": "You open the cabinet 4. The cabinet 4 is open. In it, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 18,
+          "act": "go to shelf 1",
+          "obs": "You arrive at shelf 1. On the shelf 1, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 19,
+          "act": "go to shelf 2",
+          "obs": "You arrive at shelf 2. On the shelf 2, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 20,
+          "act": "go to shelf 3",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 21,
+          "act": "open shelf 3",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 22,
+          "act": "go to shelf 4",
+          "obs": "You arrive at shelf 4. On the shelf 4, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 23,
+          "act": "go to shelf 5",
+          "obs": "You arrive at shelf 5. On the shelf 5, you see a watch 1.",
+          "nh": false
+        },
+        {
+          "step": 24,
+          "act": "go to shelf 6",
+          "obs": "You arrive at shelf 6. On the shelf 6, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 25,
+          "act": "go to shelf 7",
+          "obs": "You arrive at shelf 7. On the shelf 7, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 26,
+          "act": "go to shelf 8",
+          "obs": "You arrive at shelf 8. On the shelf 8, you see a box 1.",
+          "nh": false
+        },
+        {
+          "step": 27,
+          "act": "open box 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 28,
+          "act": "examine box 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 29,
+          "act": "go to shelf 9",
+          "obs": "You arrive at shelf 9. On the shelf 9, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 30,
+          "act": "go to shelf 10",
+          "obs": "You arrive at shelf 10. On the shelf 10, you see nothing.",
+          "nh": false
+        }
+      ]
+    },
+    {
+      "gamefile": "/root/.cache/alfworld/json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-Plate-None-CounterTop-10/trial_T20190908_213356_017769/game.tw-pddl",
+      "task_type": "pick_clean_then_place_in_recep",
+      "arm": "B0_VanillaReAct",
+      "num_steps": 30,
+      "primary_failure": "F1_FormatOrInadmissible",
+      "multilabel_flags": {
+        "F1_FormatOrInadmissible": true,
+        "F2_RepeatLoop": false,
+        "F3_EmptySearchRedundancy": true,
+        "F4_PreconditionViolation": false,
+        "F5_StepExhaustionOther": false
+      },
+      "diagnostics": {
+        "bad_step_ratio": 0.4667,
+        "consec_repeat_max": 2,
+        "win6_max_ineff": 2,
+        "revisit_empty_count": 7,
+        "precond_hits": 0
+      },
+      "trace_preview": [
+        {
+          "step": 1,
+          "act": "go to countertop 1",
+          "obs": "You arrive at countertop 1. On the countertop 1, you see a dishsponge 1, a egg 2, and a glassbottle 2.",
+          "nh": false
+        },
+        {
+          "step": 2,
+          "act": "go to countertop 2",
+          "obs": "You arrive at countertop 2. On the countertop 2, you see a bread 1, a cellphone 1, a creditcard 2, a creditcard 1, a let",
+          "nh": false
+        },
+        {
+          "step": 3,
+          "act": "take plate 3 from countertop 2",
+          "obs": "You pick up the plate 3 from the countertop 2.",
+          "nh": false
+        },
+        {
+          "step": 4,
+          "act": "go to sinkbasin 1",
+          "obs": "You arrive at sinkbasin 1. On the sinkbasin 1, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 5,
+          "act": "clean plate 3 with sinkbasin 1",
+          "obs": "You clean the plate 3 using the sinkbasin 1.",
+          "nh": false
+        },
+        {
+          "step": 6,
+          "act": "move plate 3 to countertop 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 7,
+          "act": "move plate 3 to countertop 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 8,
+          "act": "place plate 3 on countertop 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 9,
+          "act": "put plate 3 on countertop 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 10,
+          "act": "examine countertop 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 11,
+          "act": "go to countertop 1",
+          "obs": "You arrive at countertop 1. On the countertop 1, you see a dishsponge 1, a egg 2, and a glassbottle 2.",
+          "nh": false
+        },
+        {
+          "step": 12,
+          "act": "go to countertop 2",
+          "obs": "You arrive at countertop 2. On the countertop 2, you see a bread 1, a cellphone 1, a creditcard 2, a creditcard 1, a let",
+          "nh": false
+        },
+        {
+          "step": 13,
+          "act": "put plate 3 on countertop 2",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 14,
+          "act": "go to countertop 3",
+          "obs": "You arrive at countertop 3. On the countertop 3, you see a bowl 3, a butterknife 2, a butterknife 1, a fork 2, a housepl",
+          "nh": false
+        },
+        {
+          "step": 15,
+          "act": "put plate 3 on countertop 3",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 16,
+          "act": "examine plate 3",
+          "obs": "This is a normal plate 3. In it, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 17,
+          "act": "go to countertop 1",
+          "obs": "You arrive at countertop 1. On the countertop 1, you see a dishsponge 1, a egg 2, and a glassbottle 2.",
+          "nh": false
+        },
+        {
+          "step": 18,
+          "act": "put plate 3 on countertop 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 19,
+          "act": "use countertop 3",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 20,
+          "act": "put plate 3 on top of countertop 3",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 21,
+          "act": "go to countertop 2",
+          "obs": "You arrive at countertop 2. On the countertop 2, you see a bread 1, a cellphone 1, a creditcard 2, a creditcard 1, a let",
+          "nh": false
+        },
+        {
+          "step": 22,
+          "act": "put plate 3 on countertop 2",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 23,
+          "act": "examine countertop 2",
+          "obs": "On the countertop 2, you see a bread 1, a cellphone 1, a creditcard 2, a creditcard 1, a lettuce 1, a mug 1, a spatula 1",
+          "nh": false
+        },
+        {
+          "step": 24,
+          "act": "go to countertop 3",
+          "obs": "You arrive at countertop 3. On the countertop 3, you see a bowl 3, a butterknife 2, a butterknife 1, a fork 2, a housepl",
+          "nh": false
+        },
+        {
+          "step": 25,
+          "act": "put plate 3 on countertop 3",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 26,
+          "act": "go to countertop 1",
+          "obs": "You arrive at countertop 1. On the countertop 1, you see a dishsponge 1, a egg 2, and a glassbottle 2.",
+          "nh": false
+        },
+        {
+          "step": 27,
+          "act": "put plate 3 on countertop 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 28,
+          "act": "examine plate 3",
+          "obs": "This is a normal plate 3. In it, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 29,
+          "act": "go to countertop 2",
+          "obs": "You arrive at countertop 2. On the countertop 2, you see a bread 1, a cellphone 1, a creditcard 2, a creditcard 1, a let",
+          "nh": false
+        },
+        {
+          "step": 30,
+          "act": "put plate 3 on countertop 2",
+          "obs": "Nothing happens.",
+          "nh": true
+        }
+      ]
+    },
+    {
+      "gamefile": "/root/.cache/alfworld/json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-Pan-None-CounterTop-10/trial_T20190908_032518_891433/game.tw-pddl",
+      "task_type": "pick_clean_then_place_in_recep",
+      "arm": "B0_VanillaReAct",
+      "num_steps": 30,
+      "primary_failure": "F2_RepeatLoop",
+      "multilabel_flags": {
+        "F1_FormatOrInadmissible": false,
+        "F2_RepeatLoop": true,
+        "F3_EmptySearchRedundancy": false,
+        "F4_PreconditionViolation": false,
+        "F5_StepExhaustionOther": false
+      },
+      "diagnostics": {
+        "bad_step_ratio": 0.3,
+        "consec_repeat_max": 4,
+        "win6_max_ineff": 4,
+        "revisit_empty_count": 0,
+        "precond_hits": 0
+      },
+      "trace_preview": [
+        {
+          "step": 1,
+          "act": "go to countertop 1",
+          "obs": "You arrive at countertop 1. On the countertop 1, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 2,
+          "act": "go to cabinet 1",
+          "obs": "You arrive at cabinet 1. On the cabinet 1, you see a plate 1, and a vase 1.",
+          "nh": false
+        },
+        {
+          "step": 3,
+          "act": "go to cabinet 2",
+          "obs": "You arrive at cabinet 2. The cabinet 2 is closed.",
+          "nh": false
+        },
+        {
+          "step": 4,
+          "act": "open cabinet 2",
+          "obs": "You open the cabinet 2. The cabinet 2 is open. In it, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 5,
+          "act": "go to cabinet 3",
+          "obs": "You arrive at cabinet 3. On the cabinet 3, you see a peppershaker 1, and a soapbottle 1.",
+          "nh": false
+        },
+        {
+          "step": 6,
+          "act": "go to cabinet 4",
+          "obs": "You arrive at cabinet 4. On the cabinet 4, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 7,
+          "act": "go to countertop 2",
+          "obs": "You arrive at countertop 2. On the countertop 2, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 8,
+          "act": "go to drawer 1",
+          "obs": "You arrive at drawer 1. The drawer 1 is closed.",
+          "nh": false
+        },
+        {
+          "step": 9,
+          "act": "open drawer 1",
+          "obs": "You open the drawer 1. The drawer 1 is open. In it, you see a creditcard 1, and a fork 1.",
+          "nh": false
+        },
+        {
+          "step": 10,
+          "act": "go to drawer 2",
+          "obs": "You arrive at drawer 2. The drawer 2 is closed.",
+          "nh": false
+        },
+        {
+          "step": 11,
+          "act": "open drawer 2",
+          "obs": "You open the drawer 2. The drawer 2 is open. In it, you see a creditcard 2, a dishsponge 1, and a spatula 1.",
+          "nh": false
+        },
+        {
+          "step": 12,
+          "act": "go to drawer 3",
+          "obs": "You arrive at drawer 3. The drawer 3 is closed.",
+          "nh": false
+        },
+        {
+          "step": 13,
+          "act": "open drawer 3",
+          "obs": "You open the drawer 3. The drawer 3 is open. In it, you see a saltshaker 1, and a spoon 1.",
+          "nh": false
+        },
+        {
+          "step": 14,
+          "act": "go to cabinet 5",
+          "obs": "You arrive at cabinet 5. The cabinet 5 is closed.",
+          "nh": false
+        },
+        {
+          "step": 15,
+          "act": "open cabinet 5",
+          "obs": "You open the cabinet 5. The cabinet 5 is open. In it, you see a peppershaker 2.",
+          "nh": false
+        },
+        {
+          "step": 16,
+          "act": "go to cabinet 6",
+          "obs": "You arrive at cabinet 6. The cabinet 6 is closed.",
+          "nh": false
+        },
+        {
+          "step": 17,
+          "act": "open cabinet 6",
+          "obs": "You open the cabinet 6. The cabinet 6 is open. In it, you see a glassbottle 1.",
+          "nh": false
+        },
+        {
+          "step": 18,
+          "act": "examine countertop 3",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 19,
+          "act": "go to shelf 1",
+          "obs": "You arrive at shelf 1. On the shelf 1, you see a mug 3.",
+          "nh": false
+        },
+        {
+          "step": 20,
+          "act": "go to shelf 2",
+          "obs": "You arrive at shelf 2. On the shelf 2, you see a cellphone 1, and a papertowelroll 1.",
+          "nh": false
+        },
+        {
+          "step": 21,
+          "act": "go to shelf 3",
+          "obs": "You arrive at shelf 3. On the shelf 3, you see a vase 2.",
+          "nh": false
+        },
+        {
+          "step": 22,
+          "act": "inventory",
+          "obs": "You are not carrying anything.",
+          "nh": false
+        },
+        {
+          "step": 23,
+          "act": "examine countertop 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 24,
+          "act": "report task impossible",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 25,
+          "act": "report task impossible",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 26,
+          "act": "report task impossible",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 27,
+          "act": "report task impossible",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 28,
+          "act": "examine surroundings",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 29,
+          "act": "report task status",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 30,
+          "act": "report task status",
+          "obs": "Nothing happens.",
+          "nh": true
+        }
+      ]
+    },
+    {
+      "gamefile": "/root/.cache/alfworld/json_2.1.1/valid_unseen/pick_two_obj_and_place-KeyChain-None-Safe-219/trial_T20190909_012027_782483/game.tw-pddl",
+      "task_type": "pick_two_obj_and_place",
+      "arm": "B0_VanillaReAct",
+      "num_steps": 30,
+      "primary_failure": "F3_EmptySearchRedundancy",
+      "multilabel_flags": {
+        "F1_FormatOrInadmissible": false,
+        "F2_RepeatLoop": false,
+        "F3_EmptySearchRedundancy": true,
+        "F4_PreconditionViolation": false,
+        "F5_StepExhaustionOther": false
+      },
+      "diagnostics": {
+        "bad_step_ratio": 0.1333,
+        "consec_repeat_max": 1,
+        "win6_max_ineff": 1,
+        "revisit_empty_count": 3,
+        "precond_hits": 0
+      },
+      "trace_preview": [
+        {
+          "step": 1,
+          "act": "go to drawer 1",
+          "obs": "You arrive at drawer 1. The drawer 1 is closed.",
+          "nh": false
+        },
+        {
+          "step": 2,
+          "act": "open drawer 1",
+          "obs": "You open the drawer 1. The drawer 1 is open. In it, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 3,
+          "act": "go to drawer 2",
+          "obs": "You arrive at drawer 2. The drawer 2 is closed.",
+          "nh": false
+        },
+        {
+          "step": 4,
+          "act": "open drawer 2",
+          "obs": "You open the drawer 2. The drawer 2 is open. In it, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 5,
+          "act": "go to drawer 3",
+          "obs": "You arrive at drawer 3. The drawer 3 is closed.",
+          "nh": false
+        },
+        {
+          "step": 6,
+          "act": "open drawer 3",
+          "obs": "You open the drawer 3. The drawer 3 is open. In it, you see a creditcard 2.",
+          "nh": false
+        },
+        {
+          "step": 7,
+          "act": "go to drawer 4",
+          "obs": "You arrive at drawer 4. The drawer 4 is closed.",
+          "nh": false
+        },
+        {
+          "step": 8,
+          "act": "open drawer 4",
+          "obs": "You open the drawer 4. The drawer 4 is open. In it, you see a keychain 3, and a watch 2.",
+          "nh": false
+        },
+        {
+          "step": 9,
+          "act": "take keychain 3 from drawer 4",
+          "obs": "You pick up the keychain 3 from the drawer 4.",
+          "nh": false
+        },
+        {
+          "step": 10,
+          "act": "go to safe 1",
+          "obs": "You arrive at safe 1. The safe 1 is closed.",
+          "nh": false
+        },
+        {
+          "step": 11,
+          "act": "open safe 1",
+          "obs": "You open the safe 1. The safe 1 is open. In it, you see a statue 2, and a watch 3.",
+          "nh": false
+        },
+        {
+          "step": 12,
+          "act": "move keychain 3 to safe 1",
+          "obs": "You move the keychain 3 to the safe 1.",
+          "nh": false
+        },
+        {
+          "step": 13,
+          "act": "go to drawer 5",
+          "obs": "You arrive at drawer 5. The drawer 5 is closed.",
+          "nh": false
+        },
+        {
+          "step": 14,
+          "act": "open drawer 5",
+          "obs": "You open the drawer 5. The drawer 5 is open. In it, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 15,
+          "act": "go to drawer 2",
+          "obs": "You arrive at drawer 2. The drawer 2 is open. In it, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 16,
+          "act": "go to drawer 3",
+          "obs": "You arrive at drawer 3. The drawer 3 is open. In it, you see a creditcard 2.",
+          "nh": false
+        },
+        {
+          "step": 17,
+          "act": "go to drawer 4",
+          "obs": "You arrive at drawer 4. The drawer 4 is open. In it, you see a watch 2.",
+          "nh": false
+        },
+        {
+          "step": 18,
+          "act": "go to drawer 5",
+          "obs": "You arrive at drawer 5. The drawer 5 is open. In it, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 19,
+          "act": "go to drawer 6",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 20,
+          "act": "go to cabinet 1",
+          "obs": "You arrive at cabinet 1. The cabinet 1 is closed.",
+          "nh": false
+        },
+        {
+          "step": 21,
+          "act": "open cabinet 1",
+          "obs": "You open the cabinet 1. The cabinet 1 is open. In it, you see a vase 1.",
+          "nh": false
+        },
+        {
+          "step": 22,
+          "act": "go to cabinet 2",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 23,
+          "act": "go to shelf 1",
+          "obs": "You arrive at shelf 1. On the shelf 1, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 24,
+          "act": "go to shelf 2",
+          "obs": "You arrive at shelf 2. On the shelf 2, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 25,
+          "act": "go to shelf 3",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 26,
+          "act": "go to cabinet 2",
+          "obs": "You arrive at cabinet 2. The cabinet 2 is closed.",
+          "nh": false
+        },
+        {
+          "step": 27,
+          "act": "open cabinet 2",
+          "obs": "You open the cabinet 2. The cabinet 2 is open. In it, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 28,
+          "act": "go to cabinet 3",
+          "obs": "You arrive at cabinet 3. The cabinet 3 is closed.",
+          "nh": false
+        },
+        {
+          "step": 29,
+          "act": "open cabinet 3",
+          "obs": "You open the cabinet 3. The cabinet 3 is open. In it, you see a newspaper 1.",
+          "nh": false
+        },
+        {
+          "step": 30,
+          "act": "go to cabinet 4",
+          "obs": "Nothing happens.",
+          "nh": true
+        }
+      ]
+    },
+    {
+      "gamefile": "/root/.cache/alfworld/json_2.1.1/valid_unseen/pick_heat_then_place_in_recep-Apple-None-GarbageCan-10/trial_T20190908_145356_918528/game.tw-pddl",
+      "task_type": "pick_heat_then_place_in_recep",
+      "arm": "B0_VanillaReAct",
+      "num_steps": 30,
+      "primary_failure": "F4_PreconditionViolation",
+      "multilabel_flags": {
+        "F1_FormatOrInadmissible": false,
+        "F2_RepeatLoop": false,
+        "F3_EmptySearchRedundancy": false,
+        "F4_PreconditionViolation": true,
+        "F5_StepExhaustionOther": false
+      },
+      "diagnostics": {
+        "bad_step_ratio": 0.1,
+        "consec_repeat_max": 2,
+        "win6_max_ineff": 2,
+        "revisit_empty_count": 0,
+        "precond_hits": 2
+      },
+      "trace_preview": [
+        {
+          "step": 1,
+          "act": "go to fridge 1",
+          "obs": "You arrive at fridge 1. The fridge 1 is closed.",
+          "nh": false
+        },
+        {
+          "step": 2,
+          "act": "open fridge 1",
+          "obs": "You open the fridge 1. The fridge 1 is open. In it, you see a bowl 1, a bread 1, a cup 1, a lettuce 2, and a potato 1.",
+          "nh": false
+        },
+        {
+          "step": 3,
+          "act": "go to cabinet 1",
+          "obs": "You arrive at cabinet 1. On the cabinet 1, you see a glassbottle 1, and a soapbottle 1.",
+          "nh": false
+        },
+        {
+          "step": 4,
+          "act": "go to cabinet 2",
+          "obs": "You arrive at cabinet 2. The cabinet 2 is closed.",
+          "nh": false
+        },
+        {
+          "step": 5,
+          "act": "open cabinet 2",
+          "obs": "You open the cabinet 2. The cabinet 2 is open. In it, you see a plate 1.",
+          "nh": false
+        },
+        {
+          "step": 6,
+          "act": "go to cabinet 3",
+          "obs": "You arrive at cabinet 3. On the cabinet 3, you see a saltshaker 1, and a vase 1.",
+          "nh": false
+        },
+        {
+          "step": 7,
+          "act": "go to cabinet 4",
+          "obs": "You arrive at cabinet 4. On the cabinet 4, you see a mug 1, and a soapbottle 2.",
+          "nh": false
+        },
+        {
+          "step": 8,
+          "act": "go to cabinet 5",
+          "obs": "You arrive at cabinet 5. The cabinet 5 is closed.",
+          "nh": false
+        },
+        {
+          "step": 9,
+          "act": "open cabinet 5",
+          "obs": "You open the cabinet 5. The cabinet 5 is open. In it, you see a glassbottle 2.",
+          "nh": false
+        },
+        {
+          "step": 10,
+          "act": "go to cabinet 6",
+          "obs": "You arrive at cabinet 6. The cabinet 6 is closed.",
+          "nh": false
+        },
+        {
+          "step": 11,
+          "act": "open cabinet 6",
+          "obs": "You open the cabinet 6. The cabinet 6 is open. In it, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 12,
+          "act": "go to countertop 1",
+          "obs": "You arrive at countertop 1. On the countertop 1, you see a cellphone 1, a mug 2, a pan 2, and a tomato 1.",
+          "nh": false
+        },
+        {
+          "step": 13,
+          "act": "go to countertop 2",
+          "obs": "You arrive at countertop 2. On the countertop 2, you see a cellphone 3, a creditcard 1, a dishsponge 1, a lettuce 3, a l",
+          "nh": false
+        },
+        {
+          "step": 14,
+          "act": "go to countertop 3",
+          "obs": "You arrive at countertop 3. On the countertop 3, you see a bread 2, a butterknife 2, a butterknife 1, a egg 1, a glassbo",
+          "nh": false
+        },
+        {
+          "step": 15,
+          "act": "go to drawer 1",
+          "obs": "You arrive at drawer 1. The drawer 1 is closed.",
+          "nh": false
+        },
+        {
+          "step": 16,
+          "act": "open drawer 1",
+          "obs": "You open the drawer 1. The drawer 1 is open. In it, you see a cellphone 2, and a fork 1.",
+          "nh": false
+        },
+        {
+          "step": 17,
+          "act": "go to drawer 2",
+          "obs": "You arrive at drawer 2. The drawer 2 is closed.",
+          "nh": false
+        },
+        {
+          "step": 18,
+          "act": "open drawer 2",
+          "obs": "You open the drawer 2. The drawer 2 is open. In it, you see a creditcard 2, a dishsponge 2, a saltshaker 2, and a spatul",
+          "nh": false
+        },
+        {
+          "step": 19,
+          "act": "go to drawer 3",
+          "obs": "You arrive at drawer 3. The drawer 3 is closed.",
+          "nh": false
+        },
+        {
+          "step": 20,
+          "act": "open drawer 3",
+          "obs": "You open the drawer 3. The drawer 3 is open. In it, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 21,
+          "act": "go to shelf 1",
+          "obs": "You arrive at shelf 1. On the shelf 1, you see a mug 3, and a papertowelroll 1.",
+          "nh": false
+        },
+        {
+          "step": 22,
+          "act": "go to shelf 2",
+          "obs": "You arrive at shelf 2. On the shelf 2, you see a peppershaker 2, a peppershaker 1, and a vase 2.",
+          "nh": false
+        },
+        {
+          "step": 23,
+          "act": "go to shelf 3",
+          "obs": "You arrive at shelf 3. On the shelf 3, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 24,
+          "act": "go to garbagecan 1",
+          "obs": "You arrive at garbagecan 1. On the garbagecan 1, you see a apple 2, and a apple 1.",
+          "nh": false
+        },
+        {
+          "step": 25,
+          "act": "take apple 1 from garbagecan 1",
+          "obs": "You pick up the apple 1 from the garbagecan 1.",
+          "nh": false
+        },
+        {
+          "step": 26,
+          "act": "heat apple 1 with microwave 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 27,
+          "act": "heat apple 1 with microwave 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 28,
+          "act": "go to stoveburner 1",
+          "obs": "You arrive at stoveburner 1. On the stoveburner 1, you see a pan 2.",
+          "nh": false
+        },
+        {
+          "step": 29,
+          "act": "use stoveburner 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 30,
+          "act": "go to stoveburner 2",
+          "obs": "You arrive at stoveburner 2. On the stoveburner 2, you see a pan 1.",
+          "nh": false
+        }
+      ]
+    },
+    {
+      "gamefile": "/root/.cache/alfworld/json_2.1.1/valid_unseen/pick_two_obj_and_place-Pillow-None-Sofa-219/trial_T20190907_163408_914117/game.tw-pddl",
+      "task_type": "pick_two_obj_and_place",
+      "arm": "B0_VanillaReAct",
+      "num_steps": 30,
+      "primary_failure": "F5_StepExhaustionOther",
+      "multilabel_flags": {
+        "F1_FormatOrInadmissible": false,
+        "F2_RepeatLoop": false,
+        "F3_EmptySearchRedundancy": false,
+        "F4_PreconditionViolation": false,
+        "F5_StepExhaustionOther": true
+      },
+      "diagnostics": {
+        "bad_step_ratio": 0.1333,
+        "consec_repeat_max": 2,
+        "win6_max_ineff": 2,
+        "revisit_empty_count": 0,
+        "precond_hits": 0
+      },
+      "trace_preview": [
+        {
+          "step": 1,
+          "act": "go to drawer 1",
+          "obs": "You arrive at drawer 1. The drawer 1 is closed.",
+          "nh": false
+        },
+        {
+          "step": 2,
+          "act": "open drawer 1",
+          "obs": "You open the drawer 1. The drawer 1 is open. In it, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 3,
+          "act": "go to drawer 2",
+          "obs": "You arrive at drawer 2. The drawer 2 is closed.",
+          "nh": false
+        },
+        {
+          "step": 4,
+          "act": "open drawer 2",
+          "obs": "You open the drawer 2. The drawer 2 is open. In it, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 5,
+          "act": "go to drawer 3",
+          "obs": "You arrive at drawer 3. The drawer 3 is closed.",
+          "nh": false
+        },
+        {
+          "step": 6,
+          "act": "open drawer 3",
+          "obs": "You open the drawer 3. The drawer 3 is open. In it, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 7,
+          "act": "go to drawer 4",
+          "obs": "You arrive at drawer 4. The drawer 4 is closed.",
+          "nh": false
+        },
+        {
+          "step": 8,
+          "act": "open drawer 4",
+          "obs": "You open the drawer 4. The drawer 4 is open. In it, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 9,
+          "act": "go to dresser 1",
+          "obs": "You arrive at dresser 1. On the dresser 1, you see a box 2, a cellphone 1, a creditcard 1, a laptop 1, a remotecontrol 3",
+          "nh": false
+        },
+        {
+          "step": 10,
+          "act": "go to cabinet 1",
+          "obs": "You arrive at cabinet 1. The cabinet 1 is closed.",
+          "nh": false
+        },
+        {
+          "step": 11,
+          "act": "open cabinet 1",
+          "obs": "You open the cabinet 1. The cabinet 1 is open. In it, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 12,
+          "act": "go to cabinet 2",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 13,
+          "act": "open cabinet 2",
+          "obs": "You open the cabinet 2. The cabinet 2 is open. In it, you see a box 1.",
+          "nh": false
+        },
+        {
+          "step": 14,
+          "act": "go to cabinet 3",
+          "obs": "You arrive at cabinet 3. The cabinet 3 is closed.",
+          "nh": false
+        },
+        {
+          "step": 15,
+          "act": "open cabinet 3",
+          "obs": "You open the cabinet 3. The cabinet 3 is open. In it, you see a newspaper 1.",
+          "nh": false
+        },
+        {
+          "step": 16,
+          "act": "go to cabinet 4",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 17,
+          "act": "open cabinet 4",
+          "obs": "You open the cabinet 4. The cabinet 4 is open. In it, you see a newspaper 2.",
+          "nh": false
+        },
+        {
+          "step": 18,
+          "act": "go to shelf 1",
+          "obs": "You arrive at shelf 1. On the shelf 1, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 19,
+          "act": "go to shelf 2",
+          "obs": "You arrive at shelf 2. On the shelf 2, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 20,
+          "act": "go to shelf 3",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 21,
+          "act": "go to shelf 3",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 22,
+          "act": "go to shelf 4",
+          "obs": "You arrive at shelf 4. On the shelf 4, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 23,
+          "act": "go to shelf 5",
+          "obs": "You arrive at shelf 5. On the shelf 5, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 24,
+          "act": "go to shelf 6",
+          "obs": "You arrive at shelf 6. On the shelf 6, you see a statue 3.",
+          "nh": false
+        },
+        {
+          "step": 25,
+          "act": "go to shelf 7",
+          "obs": "You arrive at shelf 7. On the shelf 7, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 26,
+          "act": "go to shelf 8",
+          "obs": "You arrive at shelf 8. On the shelf 8, you see a keychain 1.",
+          "nh": false
+        },
+        {
+          "step": 27,
+          "act": "go to shelf 9",
+          "obs": "You arrive at shelf 9. On the shelf 9, you see a tissuebox 1.",
+          "nh": false
+        },
+        {
+          "step": 28,
+          "act": "go to shelf 10",
+          "obs": "You arrive at shelf 10. On the shelf 10, you see a box 3, and a cellphone 3.",
+          "nh": false
+        },
+        {
+          "step": 29,
+          "act": "go to shelf 11",
+          "obs": "You arrive at shelf 11. On the shelf 11, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 30,
+          "act": "go to shelf 12",
+          "obs": "You arrive at shelf 12. On the shelf 12, you see nothing.",
+          "nh": false
+        }
+      ]
+    },
+    {
+      "gamefile": "/root/.cache/alfworld/json_2.1.1/valid_unseen/pick_heat_then_place_in_recep-Mug-None-CoffeeMachine-10/trial_T20190907_171933_349922/game.tw-pddl",
+      "task_type": "pick_heat_then_place_in_recep",
+      "arm": "B0_VanillaReAct",
+      "num_steps": 30,
+      "primary_failure": "F1_FormatOrInadmissible",
+      "multilabel_flags": {
+        "F1_FormatOrInadmissible": true,
+        "F2_RepeatLoop": true,
+        "F3_EmptySearchRedundancy": false,
+        "F4_PreconditionViolation": true,
+        "F5_StepExhaustionOther": false
+      },
+      "diagnostics": {
+        "bad_step_ratio": 0.5333,
+        "consec_repeat_max": 5,
+        "win6_max_ineff": 5,
+        "revisit_empty_count": 0,
+        "precond_hits": 8
+      },
+      "trace_preview": [
+        {
+          "step": 1,
+          "act": "go to cabinet 1",
+          "obs": "You arrive at cabinet 1. On the cabinet 1, you see a soapbottle 1.",
+          "nh": false
+        },
+        {
+          "step": 2,
+          "act": "go to cabinet 2",
+          "obs": "You arrive at cabinet 2. The cabinet 2 is closed.",
+          "nh": false
+        },
+        {
+          "step": 3,
+          "act": "open cabinet 2",
+          "obs": "You open the cabinet 2. The cabinet 2 is open. In it, you see a dishsponge 1, and a vase 1.",
+          "nh": false
+        },
+        {
+          "step": 4,
+          "act": "go to cabinet 3",
+          "obs": "You arrive at cabinet 3. On the cabinet 3, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 5,
+          "act": "go to drawer 1",
+          "obs": "You arrive at drawer 1. The drawer 1 is closed.",
+          "nh": false
+        },
+        {
+          "step": 6,
+          "act": "open drawer 1",
+          "obs": "You open the drawer 1. The drawer 1 is open. In it, you see a dishsponge 2, and a fork 1.",
+          "nh": false
+        },
+        {
+          "step": 7,
+          "act": "go to drawer 2",
+          "obs": "You arrive at drawer 2. The drawer 2 is closed.",
+          "nh": false
+        },
+        {
+          "step": 8,
+          "act": "open drawer 2",
+          "obs": "You open the drawer 2. The drawer 2 is open. In it, you see a saltshaker 1.",
+          "nh": false
+        },
+        {
+          "step": 9,
+          "act": "go to drawer 3",
+          "obs": "You arrive at drawer 3. The drawer 3 is closed.",
+          "nh": false
+        },
+        {
+          "step": 10,
+          "act": "open drawer 3",
+          "obs": "You open the drawer 3. The drawer 3 is open. In it, you see a peppershaker 2.",
+          "nh": false
+        },
+        {
+          "step": 11,
+          "act": "go to countertop 1",
+          "obs": "You arrive at countertop 1. On the countertop 1, you see a pan 1, and a spoon 1.",
+          "nh": false
+        },
+        {
+          "step": 12,
+          "act": "go to countertop 2",
+          "obs": "You arrive at countertop 2. On the countertop 2, you see a apple 1, a cellphone 2, a cellphone 1, a knife 1, a lettuce 2",
+          "nh": false
+        },
+        {
+          "step": 13,
+          "act": "go to countertop 3",
+          "obs": "You arrive at countertop 3. On the countertop 3, you see a bread 1, a butterknife 1, a cellphone 3, a creditcard 1, a gl",
+          "nh": false
+        },
+        {
+          "step": 14,
+          "act": "take mug 2 from countertop 3",
+          "obs": "You pick up the mug 2 from the countertop 3.",
+          "nh": false
+        },
+        {
+          "step": 15,
+          "act": "heat mug 2 with coffeemachine 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 16,
+          "act": "heat mug 2 with microwave 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 17,
+          "act": "heat mug 2 with stoveburner 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 18,
+          "act": "move mug 2 to sinkbasin 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 19,
+          "act": "move mug 2 to coffeemachine 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 20,
+          "act": "put mug 2 in coffeemachine 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 21,
+          "act": "move mug 2 to coffeemachine 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 22,
+          "act": "examine coffeemachine 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 23,
+          "act": "move mug 2 to coffeemachine 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 24,
+          "act": "put mug 2 in coffeemachine 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 25,
+          "act": "move mug 2 to coffeemachine 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 26,
+          "act": "put mug 2 near coffeemachine 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 27,
+          "act": "put mug 2 near coffeemachine 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 28,
+          "act": "put mug 2 near coffeemachine 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 29,
+          "act": "put mug 2 near coffeemachine 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 30,
+          "act": "put mug 2 near coffeemachine 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        }
+      ]
+    },
+    {
+      "gamefile": "/root/.cache/alfworld/json_2.1.1/valid_unseen/look_at_obj_in_light-AlarmClock-None-DeskLamp-308/trial_T20190908_222933_607649/game.tw-pddl",
+      "task_type": "look_at_obj_in_light",
+      "arm": "B0_VanillaReAct",
+      "num_steps": 30,
+      "primary_failure": "F2_RepeatLoop",
+      "multilabel_flags": {
+        "F1_FormatOrInadmissible": false,
+        "F2_RepeatLoop": true,
+        "F3_EmptySearchRedundancy": true,
+        "F4_PreconditionViolation": true,
+        "F5_StepExhaustionOther": false
+      },
+      "diagnostics": {
+        "bad_step_ratio": 0.3667,
+        "consec_repeat_max": 2,
+        "win6_max_ineff": 3,
+        "revisit_empty_count": 2,
+        "precond_hits": 6
+      },
+      "trace_preview": [
+        {
+          "step": 1,
+          "act": "go to desk 1",
+          "obs": "You arrive at desk 1. On the desk 1, you see a bowl 1, a desklamp 1, and a laptop 2.",
+          "nh": false
+        },
+        {
+          "step": 2,
+          "act": "go to desk 2",
+          "obs": "You arrive at desk 2. On the desk 2, you see a alarmclock 1, a keychain 2, and a mug 1.",
+          "nh": false
+        },
+        {
+          "step": 3,
+          "act": "use desklamp 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 4,
+          "act": "use desklamp 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 5,
+          "act": "examine desklamp 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 6,
+          "act": "go to shelf 1",
+          "obs": "You arrive at shelf 1. On the shelf 1, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 7,
+          "act": "go to shelf 2",
+          "obs": "You arrive at shelf 2. On the shelf 2, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 8,
+          "act": "go to shelf 3",
+          "obs": "You arrive at shelf 3. On the shelf 3, you see a bowl 1, and a desklamp 1.",
+          "nh": false
+        },
+        {
+          "step": 9,
+          "act": "use desklamp 1",
+          "obs": "You turn on the desklamp 1.",
+          "nh": false
+        },
+        {
+          "step": 10,
+          "act": "examine alarmclock 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 11,
+          "act": "use desklamp 1",
+          "obs": "You turn on the desklamp 1.",
+          "nh": false
+        },
+        {
+          "step": 12,
+          "act": "examine alarmclock 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 13,
+          "act": "go to desk 1",
+          "obs": "You arrive at desk 1. On the desk 1, you see a bowl 1, a desklamp 1, and a laptop 2.",
+          "nh": false
+        },
+        {
+          "step": 14,
+          "act": "use desklamp 1",
+          "obs": "You turn on the desklamp 1.",
+          "nh": false
+        },
+        {
+          "step": 15,
+          "act": "examine alarmclock 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 16,
+          "act": "go to bed 1",
+          "obs": "You arrive at bed 1. On the bed 1, you see a book 1, a laptop 1, a pillow 2, and a pillow 1.",
+          "nh": false
+        },
+        {
+          "step": 17,
+          "act": "take book 1 from bed 1",
+          "obs": "You pick up the book 1 from the bed 1.",
+          "nh": false
+        },
+        {
+          "step": 18,
+          "act": "use book 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 19,
+          "act": "go to desk 1",
+          "obs": "You arrive at desk 1. On the desk 1, you see a bowl 1, a desklamp 1, and a laptop 2.",
+          "nh": false
+        },
+        {
+          "step": 20,
+          "act": "use desklamp 1",
+          "obs": "You turn on the desklamp 1.",
+          "nh": false
+        },
+        {
+          "step": 21,
+          "act": "examine alarmclock 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 22,
+          "act": "go to shelf 4",
+          "obs": "You arrive at shelf 4. On the shelf 4, you see a cd 3.",
+          "nh": false
+        },
+        {
+          "step": 23,
+          "act": "go to shelf 5",
+          "obs": "You arrive at shelf 5. On the shelf 5, you see a cellphone 2.",
+          "nh": false
+        },
+        {
+          "step": 24,
+          "act": "use cellphone 2",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 25,
+          "act": "go to shelf 6",
+          "obs": "You arrive at shelf 6. On the shelf 6, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 26,
+          "act": "go to drawer 1",
+          "obs": "You arrive at drawer 1. The drawer 1 is closed.",
+          "nh": false
+        },
+        {
+          "step": 27,
+          "act": "open drawer 1",
+          "obs": "You open the drawer 1. The drawer 1 is open. In it, you see a creditcard 1, and a pencil 1.",
+          "nh": false
+        },
+        {
+          "step": 28,
+          "act": "go to drawer 2",
+          "obs": "You arrive at drawer 2. On the drawer 2, you see a cd 2.",
+          "nh": false
+        },
+        {
+          "step": 29,
+          "act": "take cd 2 from drawer 2",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 30,
+          "act": "go to drawer 3",
+          "obs": "Nothing happens.",
+          "nh": true
+        }
+      ]
+    },
+    {
+      "gamefile": "/root/.cache/alfworld/json_2.1.1/valid_unseen/pick_cool_then_place_in_recep-Tomato-None-Microwave-10/trial_T20190909_102608_318800/game.tw-pddl",
+      "task_type": "pick_cool_then_place_in_recep",
+      "arm": "B0_VanillaReAct",
+      "num_steps": 30,
+      "primary_failure": "F3_EmptySearchRedundancy",
+      "multilabel_flags": {
+        "F1_FormatOrInadmissible": false,
+        "F2_RepeatLoop": false,
+        "F3_EmptySearchRedundancy": true,
+        "F4_PreconditionViolation": false,
+        "F5_StepExhaustionOther": false
+      },
+      "diagnostics": {
+        "bad_step_ratio": 0.0,
+        "consec_repeat_max": 1,
+        "win6_max_ineff": 0,
+        "revisit_empty_count": 10,
+        "precond_hits": 0
+      },
+      "trace_preview": [
+        {
+          "step": 1,
+          "act": "go to countertop 1",
+          "obs": "You arrive at countertop 1. On the countertop 1, you see a mug 1, and a saltshaker 1.",
+          "nh": false
+        },
+        {
+          "step": 2,
+          "act": "go to countertop 2",
+          "obs": "You arrive at countertop 2. On the countertop 2, you see a butterknife 2, a butterknife 1, a cellphone 1, a glassbottle ",
+          "nh": false
+        },
+        {
+          "step": 3,
+          "act": "go to cabinet 1",
+          "obs": "You arrive at cabinet 1. On the cabinet 1, you see a dishsponge 1.",
+          "nh": false
+        },
+        {
+          "step": 4,
+          "act": "go to cabinet 2",
+          "obs": "You arrive at cabinet 2. The cabinet 2 is closed.",
+          "nh": false
+        },
+        {
+          "step": 5,
+          "act": "open cabinet 2",
+          "obs": "You open the cabinet 2. The cabinet 2 is open. In it, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 6,
+          "act": "go to cabinet 3",
+          "obs": "You arrive at cabinet 3. On the cabinet 3, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 7,
+          "act": "go to cabinet 4",
+          "obs": "You arrive at cabinet 4. On the cabinet 4, you see a cup 1, and a vase 2.",
+          "nh": false
+        },
+        {
+          "step": 8,
+          "act": "go to cabinet 5",
+          "obs": "You arrive at cabinet 5. The cabinet 5 is closed.",
+          "nh": false
+        },
+        {
+          "step": 9,
+          "act": "open cabinet 5",
+          "obs": "You open the cabinet 5. The cabinet 5 is open. In it, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 10,
+          "act": "go to cabinet 6",
+          "obs": "You arrive at cabinet 6. The cabinet 6 is closed.",
+          "nh": false
+        },
+        {
+          "step": 11,
+          "act": "open cabinet 6",
+          "obs": "You open the cabinet 6. The cabinet 6 is open. In it, you see a plate 1, and a soapbottle 1.",
+          "nh": false
+        },
+        {
+          "step": 12,
+          "act": "go to countertop 3",
+          "obs": "You arrive at countertop 3. On the countertop 3, you see a bread 1, a butterknife 3, a creditcard 2, a houseplant 1, a k",
+          "nh": false
+        },
+        {
+          "step": 13,
+          "act": "go to fridge 1",
+          "obs": "You arrive at fridge 1. The fridge 1 is closed.",
+          "nh": false
+        },
+        {
+          "step": 14,
+          "act": "open fridge 1",
+          "obs": "You open the fridge 1. The fridge 1 is open. In it, you see a bowl 2, a bowl 1, a egg 1, a lettuce 2, a lettuce 1, a pot",
+          "nh": false
+        },
+        {
+          "step": 15,
+          "act": "go to drawer 1",
+          "obs": "You arrive at drawer 1. The drawer 1 is closed.",
+          "nh": false
+        },
+        {
+          "step": 16,
+          "act": "open drawer 1",
+          "obs": "You open the drawer 1. The drawer 1 is open. In it, you see a cellphone 2.",
+          "nh": false
+        },
+        {
+          "step": 17,
+          "act": "go to drawer 2",
+          "obs": "You arrive at drawer 2. The drawer 2 is closed.",
+          "nh": false
+        },
+        {
+          "step": 18,
+          "act": "open drawer 2",
+          "obs": "You open the drawer 2. The drawer 2 is open. In it, you see a saltshaker 2, a spoon 2, and a spoon 1.",
+          "nh": false
+        },
+        {
+          "step": 19,
+          "act": "go to drawer 3",
+          "obs": "You arrive at drawer 3. The drawer 3 is closed.",
+          "nh": false
+        },
+        {
+          "step": 20,
+          "act": "open drawer 3",
+          "obs": "You open the drawer 3. The drawer 3 is open. In it, you see a saltshaker 3.",
+          "nh": false
+        },
+        {
+          "step": 21,
+          "act": "go to countertop 1",
+          "obs": "You arrive at countertop 1. On the countertop 1, you see a mug 1, and a saltshaker 1.",
+          "nh": false
+        },
+        {
+          "step": 22,
+          "act": "go to fridge 1",
+          "obs": "You arrive at fridge 1. The fridge 1 is open. In it, you see a bowl 2, a bowl 1, a egg 1, a lettuce 2, a lettuce 1, a po",
+          "nh": false
+        },
+        {
+          "step": 23,
+          "act": "go to cabinet 1",
+          "obs": "You arrive at cabinet 1. On the cabinet 1, you see a dishsponge 1.",
+          "nh": false
+        },
+        {
+          "step": 24,
+          "act": "go to countertop 2",
+          "obs": "You arrive at countertop 2. On the countertop 2, you see a butterknife 2, a butterknife 1, a cellphone 1, a glassbottle ",
+          "nh": false
+        },
+        {
+          "step": 25,
+          "act": "go to fridge 1",
+          "obs": "You arrive at fridge 1. The fridge 1 is open. In it, you see a bowl 2, a bowl 1, a egg 1, a lettuce 2, a lettuce 1, a po",
+          "nh": false
+        },
+        {
+          "step": 26,
+          "act": "go to cabinet 2",
+          "obs": "You arrive at cabinet 2. The cabinet 2 is open. In it, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 27,
+          "act": "go to countertop 3",
+          "obs": "You arrive at countertop 3. On the countertop 3, you see a bread 1, a butterknife 3, a creditcard 2, a houseplant 1, a k",
+          "nh": false
+        },
+        {
+          "step": 28,
+          "act": "go to fridge 1",
+          "obs": "You arrive at fridge 1. The fridge 1 is open. In it, you see a bowl 2, a bowl 1, a egg 1, a lettuce 2, a lettuce 1, a po",
+          "nh": false
+        },
+        {
+          "step": 29,
+          "act": "go to cabinet 3",
+          "obs": "You arrive at cabinet 3. On the cabinet 3, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 30,
+          "act": "go to countertop 1",
+          "obs": "You arrive at countertop 1. On the countertop 1, you see a mug 1, and a saltshaker 1.",
+          "nh": false
+        }
+      ]
+    },
+    {
+      "gamefile": "/root/.cache/alfworld/json_2.1.1/valid_unseen/pick_heat_then_place_in_recep-Apple-None-Fridge-10/trial_T20190906_182259_116320/game.tw-pddl",
+      "task_type": "pick_heat_then_place_in_recep",
+      "arm": "B0_VanillaReAct",
+      "num_steps": 30,
+      "primary_failure": "F4_PreconditionViolation",
+      "multilabel_flags": {
+        "F1_FormatOrInadmissible": false,
+        "F2_RepeatLoop": false,
+        "F3_EmptySearchRedundancy": false,
+        "F4_PreconditionViolation": true,
+        "F5_StepExhaustionOther": false
+      },
+      "diagnostics": {
+        "bad_step_ratio": 0.1667,
+        "consec_repeat_max": 2,
+        "win6_max_ineff": 2,
+        "revisit_empty_count": 0,
+        "precond_hits": 3
+      },
+      "trace_preview": [
+        {
+          "step": 1,
+          "act": "go to fridge 1",
+          "obs": "You arrive at fridge 1. The fridge 1 is closed.",
+          "nh": false
+        },
+        {
+          "step": 2,
+          "act": "open fridge 1",
+          "obs": "You open the fridge 1. The fridge 1 is open. In it, you see a bread 3, a bread 2, a bread 1, a lettuce 1, a tomato 2, an",
+          "nh": false
+        },
+        {
+          "step": 3,
+          "act": "go to cabinet 1",
+          "obs": "You arrive at cabinet 1. On the cabinet 1, you see a glassbottle 1.",
+          "nh": false
+        },
+        {
+          "step": 4,
+          "act": "go to cabinet 2",
+          "obs": "You arrive at cabinet 2. The cabinet 2 is closed.",
+          "nh": false
+        },
+        {
+          "step": 5,
+          "act": "open cabinet 2",
+          "obs": "You open the cabinet 2. The cabinet 2 is open. In it, you see a dishsponge 1, and a plate 1.",
+          "nh": false
+        },
+        {
+          "step": 6,
+          "act": "go to cabinet 3",
+          "obs": "You arrive at cabinet 3. On the cabinet 3, you see a plate 2.",
+          "nh": false
+        },
+        {
+          "step": 7,
+          "act": "go to cabinet 4",
+          "obs": "You arrive at cabinet 4. On the cabinet 4, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 8,
+          "act": "go to cabinet 5",
+          "obs": "You arrive at cabinet 5. The cabinet 5 is closed.",
+          "nh": false
+        },
+        {
+          "step": 9,
+          "act": "open cabinet 5",
+          "obs": "You open the cabinet 5. The cabinet 5 is open. In it, you see a dishsponge 2, a peppershaker 1, and a soapbottle 1.",
+          "nh": false
+        },
+        {
+          "step": 10,
+          "act": "go to cabinet 6",
+          "obs": "You arrive at cabinet 6. The cabinet 6 is closed.",
+          "nh": false
+        },
+        {
+          "step": 11,
+          "act": "open cabinet 6",
+          "obs": "You open the cabinet 6. The cabinet 6 is open. In it, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 12,
+          "act": "go to countertop 1",
+          "obs": "You arrive at countertop 1. On the countertop 1, you see a cellphone 1, a creditcard 3, a creditcard 1, and a pan 1.",
+          "nh": false
+        },
+        {
+          "step": 13,
+          "act": "go to countertop 2",
+          "obs": "You arrive at countertop 2. On the countertop 2, you see a creditcard 2, a knife 2, a knife 1, a statue 1, and a tomato ",
+          "nh": false
+        },
+        {
+          "step": 14,
+          "act": "go to countertop 3",
+          "obs": "You arrive at countertop 3. On the countertop 3, you see a bowl 2, a bowl 1, a butterknife 1, a cellphone 3, a cellphone",
+          "nh": false
+        },
+        {
+          "step": 15,
+          "act": "go to drawer 1",
+          "obs": "You arrive at drawer 1. The drawer 1 is closed.",
+          "nh": false
+        },
+        {
+          "step": 16,
+          "act": "open drawer 1",
+          "obs": "You open the drawer 1. The drawer 1 is open. In it, you see a fork 1.",
+          "nh": false
+        },
+        {
+          "step": 17,
+          "act": "go to drawer 2",
+          "obs": "You arrive at drawer 2. The drawer 2 is closed.",
+          "nh": false
+        },
+        {
+          "step": 18,
+          "act": "open drawer 2",
+          "obs": "You open the drawer 2. The drawer 2 is open. In it, you see a fork 2.",
+          "nh": false
+        },
+        {
+          "step": 19,
+          "act": "go to drawer 3",
+          "obs": "You arrive at drawer 3. The drawer 3 is closed.",
+          "nh": false
+        },
+        {
+          "step": 20,
+          "act": "open drawer 3",
+          "obs": "You open the drawer 3. The drawer 3 is open. In it, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 21,
+          "act": "go to shelf 1",
+          "obs": "You arrive at shelf 1. On the shelf 1, you see a papertowelroll 1, a saltshaker 1, and a statue 2.",
+          "nh": false
+        },
+        {
+          "step": 22,
+          "act": "go to shelf 2",
+          "obs": "You arrive at shelf 2. On the shelf 2, you see a dishsponge 3, a mug 1, and a vase 1.",
+          "nh": false
+        },
+        {
+          "step": 23,
+          "act": "go to shelf 3",
+          "obs": "You arrive at shelf 3. On the shelf 3, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 24,
+          "act": "go to garbagecan 1",
+          "obs": "You arrive at garbagecan 1. On the garbagecan 1, you see a apple 2, a apple 1, a egg 2, a egg 1, a potato 2, and a potat",
+          "nh": false
+        },
+        {
+          "step": 25,
+          "act": "take apple 1 from garbagecan 1",
+          "obs": "You pick up the apple 1 from the garbagecan 1.",
+          "nh": false
+        },
+        {
+          "step": 26,
+          "act": "heat apple 1 with microwave 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 27,
+          "act": "move apple 1 to fridge 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 28,
+          "act": "move apple 1 to fridge 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 29,
+          "act": "close fridge 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 30,
+          "act": "examine fridge 1",
+          "obs": "Nothing happens.",
+          "nh": true
+        }
+      ]
+    },
+    {
+      "gamefile": "/root/.cache/alfworld/json_2.1.1/valid_unseen/pick_two_obj_and_place-Pillow-None-Sofa-219/trial_T20190907_163240_345855/game.tw-pddl",
+      "task_type": "pick_two_obj_and_place",
+      "arm": "B0_VanillaReAct",
+      "num_steps": 30,
+      "primary_failure": "F5_StepExhaustionOther",
+      "multilabel_flags": {
+        "F1_FormatOrInadmissible": false,
+        "F2_RepeatLoop": false,
+        "F3_EmptySearchRedundancy": false,
+        "F4_PreconditionViolation": false,
+        "F5_StepExhaustionOther": true
+      },
+      "diagnostics": {
+        "bad_step_ratio": 0.1333,
+        "consec_repeat_max": 2,
+        "win6_max_ineff": 2,
+        "revisit_empty_count": 0,
+        "precond_hits": 0
+      },
+      "trace_preview": [
+        {
+          "step": 1,
+          "act": "go to sofa 1",
+          "obs": "You arrive at sofa 1. On the sofa 1, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 2,
+          "act": "go to sidetable 1",
+          "obs": "You arrive at sidetable 1. On the sidetable 1, you see a creditcard 1, a keychain 1, and a newspaper 1.",
+          "nh": false
+        },
+        {
+          "step": 3,
+          "act": "go to shelf 1",
+          "obs": "You arrive at shelf 1. On the shelf 1, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 4,
+          "act": "go to shelf 2",
+          "obs": "You arrive at shelf 2. On the shelf 2, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 5,
+          "act": "go to shelf 3",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 6,
+          "act": "go to shelf 3",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 7,
+          "act": "examine shelf 3",
+          "obs": "On the shelf 3, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 8,
+          "act": "examine shelf 4",
+          "obs": "Nothing happens.",
+          "nh": true
+        },
+        {
+          "step": 9,
+          "act": "go to shelf 4",
+          "obs": "You arrive at shelf 4. On the shelf 4, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 10,
+          "act": "go to shelf 5",
+          "obs": "You arrive at shelf 5. On the shelf 5, you see a newspaper 2.",
+          "nh": false
+        },
+        {
+          "step": 11,
+          "act": "go to shelf 6",
+          "obs": "You arrive at shelf 6. On the shelf 6, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 12,
+          "act": "go to shelf 7",
+          "obs": "You arrive at shelf 7. On the shelf 7, you see a watch 3.",
+          "nh": false
+        },
+        {
+          "step": 13,
+          "act": "go to shelf 8",
+          "obs": "You arrive at shelf 8. On the shelf 8, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 14,
+          "act": "go to shelf 9",
+          "obs": "You arrive at shelf 9. On the shelf 9, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 15,
+          "act": "go to shelf 10",
+          "obs": "You arrive at shelf 10. On the shelf 10, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 16,
+          "act": "go to shelf 11",
+          "obs": "You arrive at shelf 11. On the shelf 11, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 17,
+          "act": "go to shelf 12",
+          "obs": "You arrive at shelf 12. On the shelf 12, you see a cellphone 1.",
+          "nh": false
+        },
+        {
+          "step": 18,
+          "act": "go to drawer 1",
+          "obs": "You arrive at drawer 1. The drawer 1 is closed.",
+          "nh": false
+        },
+        {
+          "step": 19,
+          "act": "open drawer 1",
+          "obs": "You open the drawer 1. The drawer 1 is open. In it, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 20,
+          "act": "go to drawer 2",
+          "obs": "You arrive at drawer 2. The drawer 2 is closed.",
+          "nh": false
+        },
+        {
+          "step": 21,
+          "act": "open drawer 2",
+          "obs": "You open the drawer 2. The drawer 2 is open. In it, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 22,
+          "act": "go to drawer 3",
+          "obs": "You arrive at drawer 3. The drawer 3 is closed.",
+          "nh": false
+        },
+        {
+          "step": 23,
+          "act": "open drawer 3",
+          "obs": "You open the drawer 3. The drawer 3 is open. In it, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 24,
+          "act": "go to drawer 4",
+          "obs": "You arrive at drawer 4. The drawer 4 is closed.",
+          "nh": false
+        },
+        {
+          "step": 25,
+          "act": "open drawer 4",
+          "obs": "You open the drawer 4. The drawer 4 is open. In it, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 26,
+          "act": "go to drawer 5",
+          "obs": "You arrive at drawer 5. The drawer 5 is closed.",
+          "nh": false
+        },
+        {
+          "step": 27,
+          "act": "open drawer 5",
+          "obs": "You open the drawer 5. The drawer 5 is open. In it, you see nothing.",
+          "nh": false
+        },
+        {
+          "step": 28,
+          "act": "go to cabinet 1",
+          "obs": "You arrive at cabinet 1. The cabinet 1 is closed.",
+          "nh": false
+        },
+        {
+          "step": 29,
+          "act": "open cabinet 1",
+          "obs": "You open the cabinet 1. The cabinet 1 is open. In it, you see a tissuebox 1.",
+          "nh": false
+        },
+        {
+          "step": 30,
+          "act": "go to cabinet 2",
+          "obs": "Nothing happens.",
+          "nh": true
+        }
+      ]
+    }
+  ],
+  "gate0_verdict": {
+    "gate0b_in_ideal_window": true,
+    "gate0b_format_collapse": false,
+    "gate0b_ceiling_saturated": false,
+    "gate0c_f234_rate_of_fail": 0.9241,
+    "gate0c_pathology_ge_040": true,
+    "recommended_next_branch": "PROCEED_GATE1_ROLLBACK_STATEFOLD"
+  }
+}

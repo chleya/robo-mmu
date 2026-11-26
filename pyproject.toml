@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "robo-mmu"
+version = "0.1.0"
+description = "Zero-training 4D Multi-Bank KV Attention MMU + Digital SR Edge Flip-Flop for Edge Small Language Models"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24",
+    "torch>=2.1",
+    "transformers>=4.40",
+]
+
+[tool.setuptools]
+py-modules = ["robo_mmu"]

@@ -1,0 +1,501 @@
+{
+  "prefix": "full134_api7b_4arm_closeout",
+  "note": "A3_Rollback_NegConstraint completed on quick24 (17/24=70.83%), stopped before full134 per 2026-11-22 user closeout decision.",
+  "file_sha256": {
+    "full134_api7b_A0_VanillaReAct.jsonl": "af98c63572908bc371b0ad27f675b95537985cb3e7a53813637b3d7b76384d9c",
+    "full134_api7b_A1_StateAct_Clean.jsonl": "edddfbad391d29982ab66e2a2010340116e2e0addcf8693117be770f50230caa",
+    "full134_api7b_A2_FoldMap_NoRollback.jsonl": "9b2df12ff93fc48cb237d924ba4f987a558905abc0882f59acb779a1befca326",
+    "full134_api7b_A4_RoboBud_Exec.jsonl": "009108f8fb0fa4624902cdacab28edaf3988dfc8df8a7838bcdfccc6e51975f0"
+  },
+  "arm_summaries": {
+    "A0_VanillaReAct": {
+      "n_episodes": 134,
+      "success_count": 96,
+      "success_rate": 0.7164,
+      "fail_count": 38,
+      "mean_steps_all": 16.82,
+      "mean_steps_success": 11.6,
+      "mean_peak_prompt_tokens": 1686.3,
+      "max_peak_prompt_tokens": 2943,
+      "mean_total_gen_tokens": 354.3,
+      "truncation_rate": 0.0,
+      "by_task_type": {
+        "pick_and_place_simple": {
+          "n": 24,
+          "wins": 19,
+          "success_rate": 0.7917,
+          "mean_steps": 14.92
+        },
+        "pick_clean_then_place_in_recep": {
+          "n": 31,
+          "wins": 25,
+          "success_rate": 0.8065,
+          "mean_steps": 14.13
+        },
+        "pick_heat_then_place_in_recep": {
+          "n": 23,
+          "wins": 19,
+          "success_rate": 0.8261,
+          "mean_steps": 16.3
+        },
+        "pick_cool_then_place_in_recep": {
+          "n": 21,
+          "wins": 15,
+          "success_rate": 0.7143,
+          "mean_steps": 16.48
+        },
+        "look_at_obj_in_light": {
+          "n": 18,
+          "wins": 11,
+          "success_rate": 0.6111,
+          "mean_steps": 18.17
+        },
+        "pick_two_obj_and_place": {
+          "n": 17,
+          "wins": 7,
+          "success_rate": 0.4118,
+          "mean_steps": 24.12
+        }
+      },
+      "pathology_primary_counts": {
+        "F1_FormatOrInadmissible": 13,
+        "F2_RepeatLoop": 7,
+        "F3_EmptySearchRedundancy": 10,
+        "F4_PreconditionViolation": 2,
+        "F5_StepExhaustionOther": 6
+      },
+      "pathology_primary_rates_of_fail": {
+        "F1_FormatOrInadmissible": 0.3421,
+        "F2_RepeatLoop": 0.1842,
+        "F3_EmptySearchRedundancy": 0.2632,
+        "F4_PreconditionViolation": 0.0526,
+        "F5_StepExhaustionOther": 0.1579
+      },
+      "pathology_multilabel_counts": {
+        "F1_FormatOrInadmissible": 13,
+        "F2_RepeatLoop": 17,
+        "F3_EmptySearchRedundancy": 15,
+        "F4_PreconditionViolation": 15,
+        "F5_StepExhaustionOther": 6
+      },
+      "pathology_multilabel_rates_of_fail": {
+        "F1_FormatOrInadmissible": 0.3421,
+        "F2_RepeatLoop": 0.4474,
+        "F3_EmptySearchRedundancy": 0.3947,
+        "F4_PreconditionViolation": 0.3947,
+        "F5_StepExhaustionOther": 0.1579
+      },
+      "joint_F2_F3_F4_fail_count": 30,
+      "joint_F2_F3_F4_rate_of_fail": 0.7895
+    },
+    "A1_StateAct_Clean": {
+      "n_episodes": 134,
+      "success_count": 101,
+      "success_rate": 0.7537,
+      "fail_count": 33,
+      "mean_steps_all": 15.95,
+      "mean_steps_success": 11.36,
+      "mean_peak_prompt_tokens": 2231.8,
+      "max_peak_prompt_tokens": 3444,
+      "mean_total_gen_tokens": 777.2,
+      "truncation_rate": 0.1866,
+      "by_task_type": {
+        "pick_and_place_simple": {
+          "n": 24,
+          "wins": 18,
+          "success_rate": 0.75,
+          "mean_steps": 16.25
+        },
+        "pick_clean_then_place_in_recep": {
+          "n": 31,
+          "wins": 26,
+          "success_rate": 0.8387,
+          "mean_steps": 13.03
+        },
+        "pick_heat_then_place_in_recep": {
+          "n": 23,
+          "wins": 18,
+          "success_rate": 0.7826,
+          "mean_steps": 19.3
+        },
+        "pick_cool_then_place_in_recep": {
+          "n": 21,
+          "wins": 17,
+          "success_rate": 0.8095,
+          "mean_steps": 13.38
+        },
+        "look_at_obj_in_light": {
+          "n": 18,
+          "wins": 13,
+          "success_rate": 0.7222,
+          "mean_steps": 12.83
+        },
+        "pick_two_obj_and_place": {
+          "n": 17,
+          "wins": 9,
+          "success_rate": 0.5294,
+          "mean_steps": 22.76
+        }
+      },
+      "pathology_primary_counts": {
+        "F1_FormatOrInadmissible": 14,
+        "F2_RepeatLoop": 0,
+        "F3_EmptySearchRedundancy": 9,
+        "F4_PreconditionViolation": 1,
+        "F5_StepExhaustionOther": 9
+      },
+      "pathology_primary_rates_of_fail": {
+        "F1_FormatOrInadmissible": 0.4242,
+        "F2_RepeatLoop": 0.0,
+        "F3_EmptySearchRedundancy": 0.2727,
+        "F4_PreconditionViolation": 0.0303,
+        "F5_StepExhaustionOther": 0.2727
+      },
+      "pathology_multilabel_counts": {
+        "F1_FormatOrInadmissible": 14,
+        "F2_RepeatLoop": 11,
+        "F3_EmptySearchRedundancy": 13,
+        "F4_PreconditionViolation": 12,
+        "F5_StepExhaustionOther": 9
+      },
+      "pathology_multilabel_rates_of_fail": {
+        "F1_FormatOrInadmissible": 0.4242,
+        "F2_RepeatLoop": 0.3333,
+        "F3_EmptySearchRedundancy": 0.3939,
+        "F4_PreconditionViolation": 0.3636,
+        "F5_StepExhaustionOther": 0.2727
+      },
+      "joint_F2_F3_F4_fail_count": 23,
+      "joint_F2_F3_F4_rate_of_fail": 0.697
+    },
+    "A2_FoldMap_NoRollback": {
+      "n_episodes": 134,
+      "success_count": 73,
+      "success_rate": 0.5448,
+      "fail_count": 61,
+      "mean_steps_all": 19.39,
+      "mean_steps_success": 10.52,
+      "mean_peak_prompt_tokens": 1205.3,
+      "max_peak_prompt_tokens": 1540,
+      "mean_total_gen_tokens": 503.1,
+      "truncation_rate": 0.0,
+      "by_task_type": {
+        "pick_and_place_simple": {
+          "n": 24,
+          "wins": 18,
+          "success_rate": 0.75,
+          "mean_steps": 13.83
+        },
+        "pick_clean_then_place_in_recep": {
+          "n": 31,
+          "wins": 26,
+          "success_rate": 0.8387,
+          "mean_steps": 14.94
+        },
+        "pick_heat_then_place_in_recep": {
+          "n": 23,
+          "wins": 14,
+          "success_rate": 0.6087,
+          "mean_steps": 18.52
+        },
+        "pick_cool_then_place_in_recep": {
+          "n": 21,
+          "wins": 7,
+          "success_rate": 0.3333,
+          "mean_steps": 23.86
+        },
+        "look_at_obj_in_light": {
+          "n": 18,
+          "wins": 7,
+          "success_rate": 0.3889,
+          "mean_steps": 21.5
+        },
+        "pick_two_obj_and_place": {
+          "n": 17,
+          "wins": 1,
+          "success_rate": 0.0588,
+          "mean_steps": 28.76
+        }
+      },
+      "pathology_primary_counts": {
+        "F1_FormatOrInadmissible": 17,
+        "F2_RepeatLoop": 12,
+        "F3_EmptySearchRedundancy": 30,
+        "F4_PreconditionViolation": 2,
+        "F5_StepExhaustionOther": 0
+      },
+      "pathology_primary_rates_of_fail": {
+        "F1_FormatOrInadmissible": 0.2787,
+        "F2_RepeatLoop": 0.1967,
+        "F3_EmptySearchRedundancy": 0.4918,
+        "F4_PreconditionViolation": 0.0328,
+        "F5_StepExhaustionOther": 0.0
+      },
+      "pathology_multilabel_counts": {
+        "F1_FormatOrInadmissible": 17,
+        "F2_RepeatLoop": 29,
+        "F3_EmptySearchRedundancy": 49,
+        "F4_PreconditionViolation": 41,
+        "F5_StepExhaustionOther": 0
+      },
+      "pathology_multilabel_rates_of_fail": {
+        "F1_FormatOrInadmissible": 0.2787,
+        "F2_RepeatLoop": 0.4754,
+        "F3_EmptySearchRedundancy": 0.8033,
+        "F4_PreconditionViolation": 0.6721,
+        "F5_StepExhaustionOther": 0.0
+      },
+      "joint_F2_F3_F4_fail_count": 61,
+      "joint_F2_F3_F4_rate_of_fail": 1.0
+    },
+    "A4_RoboBud_Exec": {
+      "n_episodes": 134,
+      "success_count": 83,
+      "success_rate": 0.6194,
+      "fail_count": 51,
+      "mean_steps_all": 18.03,
+      "mean_steps_success": 10.67,
+      "mean_peak_prompt_tokens": 1219.4,
+      "max_peak_prompt_tokens": 1608,
+      "mean_total_gen_tokens": 461.0,
+      "truncation_rate": 0.0,
+      "by_task_type": {
+        "pick_and_place_simple": {
+          "n": 24,
+          "wins": 20,
+          "success_rate": 0.8333,
+          "mean_steps": 11.62
+        },
+        "pick_clean_then_place_in_recep": {
+          "n": 31,
+          "wins": 26,
+          "success_rate": 0.8387,
+          "mean_steps": 13.84
+        },
+        "pick_heat_then_place_in_recep": {
+          "n": 23,
+          "wins": 16,
+          "success_rate": 0.6957,
+          "mean_steps": 17.65
+        },
+        "pick_cool_then_place_in_recep": {
+          "n": 21,
+          "wins": 12,
+          "success_rate": 0.5714,
+          "mean_steps": 21.14
+        },
+        "look_at_obj_in_light": {
+          "n": 18,
+          "wins": 5,
+          "success_rate": 0.2778,
+          "mean_steps": 23.11
+        },
+        "pick_two_obj_and_place": {
+          "n": 17,
+          "wins": 4,
+          "success_rate": 0.2353,
+          "mean_steps": 26.0
+        }
+      },
+      "pathology_primary_counts": {
+        "F1_FormatOrInadmissible": 32,
+        "F2_RepeatLoop": 5,
+        "F3_EmptySearchRedundancy": 14,
+        "F4_PreconditionViolation": 0,
+        "F5_StepExhaustionOther": 0
+      },
+      "pathology_primary_rates_of_fail": {
+        "F1_FormatOrInadmissible": 0.6275,
+        "F2_RepeatLoop": 0.098,
+        "F3_EmptySearchRedundancy": 0.2745,
+        "F4_PreconditionViolation": 0.0,
+        "F5_StepExhaustionOther": 0.0
+      },
+      "pathology_multilabel_counts": {
+        "F1_FormatOrInadmissible": 32,
+        "F2_RepeatLoop": 37,
+        "F3_EmptySearchRedundancy": 20,
+        "F4_PreconditionViolation": 28,
+        "F5_StepExhaustionOther": 0
+      },
+      "pathology_multilabel_rates_of_fail": {
+        "F1_FormatOrInadmissible": 0.6275,
+        "F2_RepeatLoop": 0.7255,
+        "F3_EmptySearchRedundancy": 0.3922,
+        "F4_PreconditionViolation": 0.549,
+        "F5_StepExhaustionOther": 0.0
+      },
+      "joint_F2_F3_F4_fail_count": 51,
+      "joint_F2_F3_F4_rate_of_fail": 1.0
+    }
+  },
+  "arm_extra_telemetry": {
+    "A0_VanillaReAct": {
+      "total_steps": 2254,
+      "nothing_happens_steps": 408,
+      "nothing_happens_step_rate": 0.181,
+      "rolled_back_steps": 0,
+      "adj_poisoning_episodes": 0,
+      "adj_poisoning_rate": 0.0,
+      "milestones": {
+        "found_target": "119/134 (88.8%)",
+        "picked_up": "119/134 (88.8%)",
+        "transformed_on_xform_tasks": "62/75 (82.7%)",
+        "delivered_won": "96/134 (71.6%)"
+      }
+    },
+    "A1_StateAct_Clean": {
+      "total_steps": 2137,
+      "nothing_happens_steps": 338,
+      "nothing_happens_step_rate": 0.1582,
+      "rolled_back_steps": 0,
+      "adj_poisoning_episodes": 0,
+      "adj_poisoning_rate": 0.0,
+      "milestones": {
+        "found_target": "115/134 (85.8%)",
+        "picked_up": "115/134 (85.8%)",
+        "transformed_on_xform_tasks": "63/75 (84.0%)",
+        "delivered_won": "101/134 (75.4%)"
+      }
+    },
+    "A2_FoldMap_NoRollback": {
+      "total_steps": 2598,
+      "nothing_happens_steps": 538,
+      "nothing_happens_step_rate": 0.2071,
+      "rolled_back_steps": 0,
+      "adj_poisoning_episodes": 0,
+      "adj_poisoning_rate": 0.0,
+      "milestones": {
+        "found_target": "108/134 (80.6%)",
+        "picked_up": "108/134 (80.6%)",
+        "transformed_on_xform_tasks": "50/75 (66.7%)",
+        "delivered_won": "73/134 (54.5%)"
+      }
+    },
+    "A4_RoboBud_Exec": {
+      "total_steps": 2416,
+      "nothing_happens_steps": 841,
+      "nothing_happens_step_rate": 0.3481,
+      "rolled_back_steps": 841,
+      "adj_poisoning_episodes": 0,
+      "adj_poisoning_rate": 0.0,
+      "milestones": {
+        "found_target": "107/134 (79.9%)",
+        "picked_up": "107/134 (79.9%)",
+        "transformed_on_xform_tasks": "57/75 (76.0%)",
+        "delivered_won": "83/134 (61.9%)"
+      }
+    }
+  },
+  "paired_contrasts": {
+    "A4_vs_A0": {
+      "n_paired": 134,
+      "b0_sr": 0.7164,
+      "b1_sr": 0.6194,
+      "diff_b1_minus_b0": -0.097,
+      "ci95": [
+        -0.1866,
+        -0.0075
+      ],
+      "b1_wins_b0_loses": 14,
+      "b0_wins_b1_loses": 27,
+      "mcnemar_exact_p": 0.059584
+    },
+    "A4_vs_A1": {
+      "n_paired": 134,
+      "b0_sr": 0.7537,
+      "b1_sr": 0.6194,
+      "diff_b1_minus_b0": -0.1343,
+      "ci95": [
+        -0.2239,
+        -0.0448
+      ],
+      "b1_wins_b0_loses": 10,
+      "b0_wins_b1_loses": 28,
+      "mcnemar_exact_p": 0.005098
+    },
+    "A4_vs_A2": {
+      "n_paired": 134,
+      "b0_sr": 0.5448,
+      "b1_sr": 0.6194,
+      "diff_b1_minus_b0": 0.0746,
+      "ci95": [
+        0.0075,
+        0.1418
+      ],
+      "b1_wins_b0_loses": 15,
+      "b0_wins_b1_loses": 5,
+      "mcnemar_exact_p": 0.041389
+    },
+    "A1_vs_A0": {
+      "n_paired": 134,
+      "b0_sr": 0.7164,
+      "b1_sr": 0.7537,
+      "diff_b1_minus_b0": 0.0373,
+      "ci95": [
+        -0.0448,
+        0.1194
+      ],
+      "b1_wins_b0_loses": 18,
+      "b0_wins_b1_loses": 13,
+      "mcnemar_exact_p": 0.47313
+    },
+    "A2_vs_A0": {
+      "n_paired": 134,
+      "b0_sr": 0.7164,
+      "b1_sr": 0.5448,
+      "diff_b1_minus_b0": -0.1716,
+      "ci95": [
+        -0.2687,
+        -0.0746
+      ],
+      "b1_wins_b0_loses": 12,
+      "b0_wins_b1_loses": 35,
+      "mcnemar_exact_p": 0.001089
+    },
+    "A2_vs_A1": {
+      "n_paired": 134,
+      "b0_sr": 0.7537,
+      "b1_sr": 0.5448,
+      "diff_b1_minus_b0": -0.209,
+      "ci95": [
+        -0.2985,
+        -0.1194
+      ],
+      "b1_wins_b0_loses": 8,
+      "b0_wins_b1_loses": 36,
+      "mcnemar_exact_p": 2.5e-05
+    }
+  },
+  "api_determinism_quick24_vs_full134": {
+    "A0_VanillaReAct": {
+      "n_overlap": 24,
+      "win_match": 18,
+      "exact_action_seq_match": 11
+    },
+    "A1_StateAct_Clean": {
+      "n_overlap": 24,
+      "win_match": 22,
+      "exact_action_seq_match": 12
+    },
+    "A2_FoldMap_NoRollback": {
+      "n_overlap": 24,
+      "win_match": 19,
+      "exact_action_seq_match": 8
+    },
+    "A4_RoboBud_Exec": {
+      "n_overlap": 24,
+      "win_match": 22,
+      "exact_action_seq_match": 15
+    }
+  },
+  "a4_rollback_forensic": {
+    "wins_total": 83,
+    "wins_recovered_after_rb_ge_1": 37,
+    "fails_total": 51,
+    "fails_rb_ge_10_fixedpoint_loop": 32,
+    "fails_rb_1_to_9": 9,
+    "fails_rb_0": 10
+  },
+  "user_verdict": "(c) clean FAIL (user confirmed 2026-11-22)"
+}

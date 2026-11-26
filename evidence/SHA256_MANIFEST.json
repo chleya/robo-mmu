@@ -1,0 +1,84 @@
+{
+  "files": [
+    {
+      "file": "evidence/full134_api7b_v1_audit_4arm.json",
+      "bytes": 14950,
+      "sha256": "738396ec740af7844b7d5fa6722e1f94aaeed290768214072402cfbfec5cb49f"
+    },
+    {
+      "file": "evidence/full134_qwen7b_b0_audit.json",
+      "bytes": 96141,
+      "sha256": "9a66d2f2b03699f90445fe3c04ae921accbf28df806165ded72d2e880752479f"
+    },
+    {
+      "file": "evidence/quick24_qwen7b_audit.json",
+      "bytes": 165257,
+      "sha256": "6fa19c98cff90006010c32bfccfbcc01520a29ffd954004940e339588fb2585a"
+    },
+    {
+      "file": "evidence/reserve24_robo_guard_2c_audit.json",
+      "bytes": 42821,
+      "sha256": "b3e366fe00d102f24aaf3b1793f8d60fa0ca0698ff11f5d7aec4f05b6743c08d"
+    },
+    {
+      "file": "evidence/robo_3p_m1_quantlens_results.json",
+      "bytes": 60001,
+      "sha256": "313a4b964bf753875af4a2ca530381662a4880633bb65bb0a13eb4297484cad0"
+    },
+    {
+      "file": "evidence/robo_4_local_cpu_dual_05b.json",
+      "bytes": 14152,
+      "sha256": "e8eb23c3622963bf92e9be41fa533bfbe137702926addee46209f868640136ed"
+    },
+    {
+      "file": "evidence/robo_brain_probe_3m_final_audit.json",
+      "bytes": 34420,
+      "sha256": "efc125a46fadac3f62ba0cd18097b8fa2e09aa7dd4a04be28d81b29b70fe2ed7"
+    },
+    {
+      "file": "evidence/robo_evolve_3a_audit.json",
+      "bytes": 112411,
+      "sha256": "63eb5f3b34030738103b61e934521106b80371d7971cb3ff1f14c47fb8340925"
+    },
+    {
+      "file": "evidence/robo_neuro_3n_final_audit.json",
+      "bytes": 26319,
+      "sha256": "de60c04f57463f3577de76d5080fdfeab984f476c65ab1c2aee68891fede4fb4"
+    },
+    {
+      "file": "evidence/robo_physics_3p_final_audit.json",
+      "bytes": 77742,
+      "sha256": "2ac52ba907a1a6d03094f11cbeea2efa39dab7d3b66e2338ebc1049ada6d1f41"
+    },
+    {
+      "file": "evidence/tier1_q24_robo_drift_2a_audit_complete.json",
+      "bytes": 83529,
+      "sha256": "cbe47ca23b3238eb243fbef8d22c4923c4053881aa505ac8d614f97ae1cfd48e"
+    },
+    {
+      "file": "evidence/tier1_q24_robo_guard_2b_audit.json",
+      "bytes": 101571,
+      "sha256": "d74001c9f1e7a2d6a3dc5f096f8721e14fdee96f8f86b0311cc3ac5bfb928a1e"
+    },
+    {
+      "file": "figures/fig1_self_poison_and_phase_transition.png",
+      "bytes": 198807,
+      "sha256": "450a1462743df2969d71bd6ed209fcdb107b8ed12c6c27b33579ccdd1636b2b9"
+    },
+    {
+      "file": "figures/fig2_quant_upstream_downstream_reversal.png",
+      "bytes": 354341,
+      "sha256": "a1d287a5896588106290e3886b310d475a172860191cf7072961cbe77d55a76a"
+    },
+    {
+      "file": "figures/fig3_4d_mask_rope_sink_conservation.png",
+      "bytes": 212931,
+      "sha256": "ff8cd04256954da5a4581dfd209ca9f0bedc94450f01a82e4d1bd835a8fed9cb"
+    },
+    {
+      "file": "figures/fig4_edge_flipflop_closed_loop_breakthrough.png",
+      "bytes": 295606,
+      "sha256": "2b250a6452fb73ad7870309daa0705f6956848bc9225dcb0a24f05a9b1993639"
+    }
+  ]
+}
